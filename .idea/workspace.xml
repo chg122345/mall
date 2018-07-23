@@ -6,7 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e143c60d-ff19-4106-97fe-304598bf5a77" name="Default" comment="" />
+    <list default="true" id="e143c60d-ff19-4106-97fe-304598bf5a77" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/mall-pojo/target/" />
@@ -23,17 +25,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mall-service/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -42,6 +34,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -143,6 +138,7 @@
     <option name="width" value="1390" />
     <option name="height" value="986" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -156,77 +152,6 @@
             <path>
               <item name="mallmanager" type="b2602c69:ProjectViewProjectNode" />
               <item name="mallmanager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mallmanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mallmanager" type="462c0819:PsiDirectoryNode" />
-              <item name="mall-service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mallmanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mallmanager" type="462c0819:PsiDirectoryNode" />
-              <item name="mall-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mallmanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mallmanager" type="462c0819:PsiDirectoryNode" />
-              <item name="mall-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mallmanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mallmanager" type="462c0819:PsiDirectoryNode" />
-              <item name="mall-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mallmanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mallmanager" type="462c0819:PsiDirectoryNode" />
-              <item name="mall-web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mallmanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mallmanager" type="462c0819:PsiDirectoryNode" />
-              <item name="mall-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mallmanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mallmanager" type="462c0819:PsiDirectoryNode" />
-              <item name="mall-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mallmanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mallmanager" type="462c0819:PsiDirectoryNode" />
-              <item name="mall-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mallmanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mallmanager" type="462c0819:PsiDirectoryNode" />
-              <item name="mall-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mall" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mallmanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mallmanager" type="462c0819:PsiDirectoryNode" />
-              <item name="mall-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mall" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -705,16 +630,15 @@
       <workItem from="1532138405749" duration="1689000" />
       <workItem from="1532140948474" duration="2088000" />
       <workItem from="1532143780843" duration="3496000" />
-      <workItem from="1532314527637" duration="7346000" />
+      <workItem from="1532314527637" duration="8126000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31948000" />
+    <option name="totallyTimeSpent" value="32728000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="441" y="31" width="1390" height="986" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5013405" side_tool="true" weight="0.32901832" />
@@ -734,11 +658,11 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" visible="true" weight="0.3410943" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" weight="0.3410943" />
       <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33482143" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3302217" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.33482143" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32901832" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -1092,8 +1016,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mall-service/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+        <state relative-caret-position="369">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
@@ -1163,7 +1087,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Spring|mall-service</last-edited>
+          <last-edited>mall-web</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
