@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ValidationConfiguration">
+    <option name="VALIDATORS">
+      <map>
+        <entry key="EJB Validator" value="false" />
+        <entry key="FreeMarker" value="true" />
+        <entry key="JPA Validator" value="false" />
+        <entry key="Jasper Validator" value="false" />
+        <entry key="Spring Model Validator" value="true" />
+        <entry key="Spring Web Flow" value="true" />
+        <entry key="Web Xml Validator" value="true" />
+      </map>
+    </option>
+  </component>
+</project>
