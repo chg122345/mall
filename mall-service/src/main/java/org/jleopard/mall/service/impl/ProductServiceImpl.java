@@ -1,9 +1,11 @@
 package org.jleopard.mall.service.impl;
 
+import org.jleopard.Primarys;
 import org.jleopard.mall.dao.ProductMapper;
 import org.jleopard.mall.model.Product;
 import org.jleopard.mall.model.ProductKey;
 import org.jleopard.mall.service.ProductService;
+import org.jleopard.util.RandomKeyUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -31,6 +33,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Product insert(Product product) {
+        product.setId(RandomKeyUtils.generateString(Primarys.PRODUCT_ID));
         if (productMapper.insertSelective(product) > 0){
             return product;
         }

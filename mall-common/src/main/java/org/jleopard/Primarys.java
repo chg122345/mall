@@ -17,10 +17,8 @@ public interface Primarys {
 
     String RANDOM_SOURCE="abcdefghijklmnopqrstuvwxyz0123456789";
     String USER_ID="uu";
-    String POST_PRIMARY_PREFIX="pt";
-    String USER_ACTION_PRIMARY_PREFIX="ua";
-    String USER_COLLECTION_PRIMARY_PREFIX="uc";
-    String USER_MESSAGE_PRIMARY_PREFIX="um";
+    String ORDER_ID="od";
+    String PRODUCT_ID="pd";
     int PRIMARY_LENGTH=30;  // 30 + 2
 
 

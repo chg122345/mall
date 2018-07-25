@@ -4,6 +4,7 @@ import lombok.ToString;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 @ToString
 public class Order extends OrderKey implements Serializable {
@@ -11,7 +12,7 @@ public class Order extends OrderKey implements Serializable {
 
     private static final long serialVersionUID = 3634156239618639671L;
 
-    private String serial;
+    private String serial; // 18位订单编号
 
     private Byte status;
 
@@ -20,6 +21,12 @@ public class Order extends OrderKey implements Serializable {
     private Double money;
 
     private Date created;
+
+    private List<OrderItem> orderItem;
+
+    private User user;
+
+    private Address address;
 
     public String getSerial() {
         return serial;
@@ -45,11 +52,11 @@ public class Order extends OrderKey implements Serializable {
         this.number = number;
     }
 
-    public Double getmoney() {
+    public Double getMoney() {
         return money;
     }
 
-    public void setmoney(Double money) {
+    public void setMoney(Double money) {
         this.money = money;
     }
 
@@ -59,5 +66,29 @@ public class Order extends OrderKey implements Serializable {
 
     public void setCreated(Date created) {
         this.created = created;
+    }
+
+    public List<OrderItem> getOrderItem() {
+        return orderItem;
+    }
+
+    public void setOrderItem(List<OrderItem> orderItem) {
+        this.orderItem = orderItem;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
     }
 }

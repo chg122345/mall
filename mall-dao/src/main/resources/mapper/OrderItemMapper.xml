@@ -48,6 +48,12 @@
     </trim>
 
   </select>
+  <select id="selectByOrderPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from ml_order_item
+ where ml_order_id = #{orderId,jdbcType=VARCHAR}
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="org.jleopard.mall.model.OrderItemKey" >
     delete from ml_order_item
     <trim prefix="where" suffixOverrides="and">

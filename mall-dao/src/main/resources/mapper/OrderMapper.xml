@@ -10,6 +10,10 @@
     <result column="number" property="number" jdbcType="INTEGER" />
     <result column="money" property="money" jdbcType="DOUBLE" />
     <result column="created" property="created" jdbcType="TIMESTAMP" />
+    <association property="user" javaType="org.jleopard.mall.model.User" select="org.jleopard.mall.dao.UserMapper.selectByPrimaryKey" column="ml_user_id"/>
+    <association property="address" javaType="org.jleopard.mall.model.Address" select="org.jleopard.mall.dao.AddressMapper.selectById" column="ml_address_id"/>
+    <collection property="orderItem" javaType="java.util.ArrayList" ofType="org.jleopard.mall.model.OrderItem"
+                select="org.jleopard.mall.dao.OrderItemMapper.selectByOrderPrimaryKey" column="id"/>
   </resultMap>
   <sql id="Base_Column_List" >
     id, ml_user_id, ml_address_id, serial, status, number, money, created

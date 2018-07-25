@@ -1,3 +1,99 @@
+POST http://localhost:8080/order?mlUserId=uuqtaxlfrz7oxetpykbpckk7dyqod0aq&mlAddressId=11
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-25T100944.500.html
+
+###
+
+POST http://localhost:8080/order?mlUserId=uuqtaxlfrz7oxetpykbpckk7dyqod0aq&mlAddressId=1111111111111111111111&number=5&money=242.5
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-25T100445.400.html
+
+###
+
+POST http://localhost:8080/order?mlUserId=uuqtaxlfrz7oxetpykbpckk7dyqod0aq&mlAddressId=1111111111111111111111&number=5&money=242.5
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-25T100249.415.html
+
+###
+
+POST http://localhost:8080/order?mlUserId=uuqtaxlfrz7oxetpykbpckk7dyqod0aq&mlAddressId=1111111111111111111111&number=5&money=242.5
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-25T100141.415.html
+
+###
+
+POST http://localhost:8080/order?mlUserId=uuqtaxlfrz7oxetpykbpckk7dyqod0aq&mlAddressId=1111111111111111111111&number=5&money=242.5
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-25T100138.415.html
+
+###
+
+POST http://localhost:8080/order?mlUserId=uuqtaxlfrz7oxetpykbpckk7dyqod0aq&mlAddressId=1111111111111111111111&number=5&money=242.5
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-25T095910.400.html
+
+###
+
+POST http://localhost:8080/order?mlUserId=uuqtaxlfrz7oxetpykbpckk7dyqod0aq&mlAddressId=1111111111111111111111&number=5&money=242.5
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-25T095115.404.html
+
+###
+
+POST http://localhost:8080/order?mlUserId=uuqtaxlfrz7oxetpykbpckk7dyqod0aq&mlAddressId=1111111111111111111111&number=5&money=242.5
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-25T095113.404.html
+
+###
+
+POST http://localhost:8080/order?mlUserId=uuqtaxlfrz7oxetpykbpckk7dyqod0aq&mlAddressId=1111111111111111111111&number=5&money=242.5
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-25T095014.404.html
+
+###
+
+POST http://localhost:8080/order?mlUserId=uuqtaxlfrz7oxetpykbpckk7dyqod0aq&mlAddressId=1111111111111111111111&number=5&money=242.5
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-25T094937.404.html
+
+###
+
+POST http://localhost:8080/order?mlUserId=uuqtaxlfrz7oxetpykbpckk7dyqod0aq&mlAddressId=1111111111111111111111&number=5&money=242.5
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-25T094933.404.html
+
+###
+
+GET http://localhost:8080/order?mlUserId=uuqtaxlfrz7oxetpykbpckk7dyqod0aq&mlAddressId=1111111111111111111111&number=5&money=242.5
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-25T094926.404.html
+
+###
+
 GET http://localhost:8080/user/uuqtaxlfrz7oxetpykbpckk7dyqod0aq?email=80588190@qq.com&nickname=GXF-MALL&password=123456789
 Accept: */*
 Cache-Control: no-cache
