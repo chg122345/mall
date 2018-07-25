@@ -1,0 +1,104 @@
+GET http://localhost:8080/user/uuqtaxlfrz7oxetpykbpckk7dyqod0aq?email=80588190@qq.com&nickname=GXF-MALL&password=123456789
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-25T011405.200.json
+
+###
+
+POST http://localhost:8080/register?email=80588190@qq.com&nickname=GXF-MALL&password=123456789
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-25T124651.200.json
+
+###
+
+GET http://localhost:8080/user/uuhesrks5t17zcxhxip5akhg58kol2b3?email=80588189@qq.com&nickname=GXF-MALL&password=123456789
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-25T124531.200.json
+
+###
+
+GET http://localhost:8080/user/uuhesrks5t17zcxhxip5akhg58kol2b3?email=80588189@qq.com&nickname=GXF-MALL&password=123456789
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-25T120138.500.html
+
+###
+
+GET http://localhost:8080/user/uuhesrks5t17zcxhxip5akhg58kol2b3?email=80588189@qq.com&nickname=GXF-MALL&password=123456789
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-25T115530.500.html
+
+###
+
+GET http://localhost:8080/user/uuhesrks5t17zcxhxip5akhg58kol2b3?email=80588189@qq.com&nickname=GXF-MALL&password=123456789
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-25T115412.404.html
+
+###
+
+POST http://localhost:8080/register?email=80588189@qq.com&nickname=GXF-MALL&password=123456789
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-25T115115.500.html
+
+###
+
+POST http://localhost:8080/register?email=80588188@qq.com&nickname=GXF-MALL&password=123456789
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-25T114911.500.html
+
+###
+
+POST http://localhost:8080/register?email=80588183@qq.com&nickname=GXF-MALL&password=123456789
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-25T114321.500.html
+
+###
+
+POST http://localhost:8080/register?email=8058818@qq.com&nickname=GXF-MALL&password=123456789
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-25T114137.500.html
+
+###
+
+POST http://localhost:8080/register?email=8058818@qq.com&nickname=GXF-MALL&password=123456789
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-25T113940.500.html
+
+###
+
+POST http://localhost:8080/register?email=8058818@qq.com&nickname=GXF-MALL&password=123456789
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-25T113834.500.html
+
+###
+
+POST http://localhost:8080/register
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-25T113540.500.html
+
+###
+

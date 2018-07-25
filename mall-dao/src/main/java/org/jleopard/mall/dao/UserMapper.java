@@ -1,16 +1,27 @@
 package org.jleopard.mall.dao;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.jleopard.mall.model.User;
 
-/**
- * @Copyright (c) 2018, Chen_9g 陈刚 (80588183@qq.com).
- * @DateTime 2018-07-23  上午11:26
- *
- * <p>
- * 众里寻他千百度，蓦然回首，那人却在，灯火阑珊处。
- * Find a way for success and not make excuses for failure.
- * </p>
- */
+import java.util.List;
+
 @Mapper
-public class UserMapper {
+public interface UserMapper {
+
+
+    int deleteByPrimaryKey(String id);
+
+    int deleteBySelective(User record);
+
+    int insert(User record);
+
+    int insertSelective(User record);
+
+    User selectByPrimaryKey(String id);
+
+    List<User> selectBySelective(User record);
+
+    int updateByPrimaryKeySelective(User record);
+
+    int updateByPrimaryKey(User record);
 }

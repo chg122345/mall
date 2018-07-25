@@ -1,10 +1,10 @@
 package org.jleopard.mall.controller;
 
-import org.jleopard.mall.service.impl.UserService;
+import org.jleopard.Msg;
+import org.jleopard.mall.model.User;
+import org.jleopard.mall.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
@@ -32,9 +32,21 @@ public class IndexController extends BaseController{
         return mv;
     }
 
-    @RequestMapping("/out")
-    public String out(){
-        System.out.println("执行--->" +userService.say("GXF"));
-        return "shuchude data";
+    @PostMapping(value = "/register")
+    public Msg register(User user){
+        User u = userService.insert(user);
+        if (u != null){
+            return Msg.success().put("user",u);
+        }
+        return Msg.fail();
+    }
+
+    @GetMapping(value = "/user/{id}")
+    public Msg getUser(@PathVariable("id") String id){
+        User u = userService.selectById(id);
+        if (u != null){
+            return Msg.success().put("user",u);
+        }
+        return Msg.fail();
     }
 }

@@ -1,0 +1,15 @@
+{
+  "code": 200,
+  "msg": "成功！",
+  "data": {
+    "user": {
+      "id": "uuhesrks5t17zcxhxip5akhg58kol2b3",
+      "email": "80588183@qq.com",
+      "nickname": "GXF-MALL",
+      "password": "123456789",
+      "role": "VIP1",
+      "type": 1,
+      "created": 1532519001000
+    }
+  }
+}

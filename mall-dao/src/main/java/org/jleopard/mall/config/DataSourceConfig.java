@@ -1,4 +1,4 @@
-package org.jleopard.mall.dao.config;
+package org.jleopard.mall.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import org.mybatis.spring.SqlSessionFactoryBean;

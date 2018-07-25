@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.jleopard.mall.dao.AddressMapper" >
+  <resultMap id="BaseResultMap" type="org.jleopard.mall.model.Address" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <id column="ml_user_id" property="mlUserId" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="phone" property="phone" jdbcType="VARCHAR" />
+    <result column="postcode" property="postcode" jdbcType="VARCHAR" />
+    <result column="place" property="place" jdbcType="VARCHAR" />
+    <result column="created" property="created" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, ml_user_id, name, phone, postcode, place, created
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="org.jleopard.mall.model.AddressKey" >
+    select 
+    <include refid="Base_Column_List" />
+    from ml_address
+    <trim prefix="where" suffixOverrides="and">
+      <if test="id != null">
+        id = #{id,jdbcType=INTEGER} and
+      </if>
+      <if test="mlUserId != null">
+        ml_user_id = #{mlUserId,jdbcType=VARCHAR}
+      </if>
+    </trim>
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="org.jleopard.mall.model.AddressKey" >
+    delete from ml_address
+    <trim prefix="where" suffixOverrides="and">
+      <if test="id != null">
+        id = #{id,jdbcType=INTEGER} and
+      </if>
+      <if test="mlUserId != null">
+        ml_user_id = #{mlUserId,jdbcType=VARCHAR}
+      </if>
+    </trim>
+  </delete>
+  <insert id="insert" parameterType="org.jleopard.mall.model.Address" >
+    insert into ml_address (id, ml_user_id, name, 
+      phone, postcode, place, 
+      created)
+    values (#{id,jdbcType=INTEGER}, #{mlUserId,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{phone,jdbcType=VARCHAR}, #{postcode,jdbcType=VARCHAR}, #{place,jdbcType=VARCHAR}, 
+      #{created,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="org.jleopard.mall.model.Address" >
+    insert into ml_address
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="mlUserId != null" >
+        ml_user_id,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="phone != null" >
+        phone,
+      </if>
+      <if test="postcode != null" >
+        postcode,
+      </if>
+      <if test="place != null" >
+        place,
+      </if>
+      <if test="created != null" >
+        created,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="mlUserId != null" >
+        #{mlUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="postcode != null" >
+        #{postcode,jdbcType=VARCHAR},
+      </if>
+      <if test="place != null" >
+        #{place,jdbcType=VARCHAR},
+      </if>
+      <if test="created != null" >
+        #{created,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.jleopard.mall.model.Address" >
+    update ml_address
+    <set >
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="postcode != null" >
+        postcode = #{postcode,jdbcType=VARCHAR},
+      </if>
+      <if test="place != null" >
+        place = #{place,jdbcType=VARCHAR},
+      </if>
+      <if test="created != null" >
+        created = #{created,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+      and ml_user_id = #{mlUserId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.jleopard.mall.model.Address" >
+    update ml_address
+    set name = #{name,jdbcType=VARCHAR},
+      phone = #{phone,jdbcType=VARCHAR},
+      postcode = #{postcode,jdbcType=VARCHAR},
+      place = #{place,jdbcType=VARCHAR},
+      created = #{created,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+      and ml_user_id = #{mlUserId,jdbcType=VARCHAR}
+  </update>
+</mapper>

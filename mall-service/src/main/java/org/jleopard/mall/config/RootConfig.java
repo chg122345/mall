@@ -1,6 +1,5 @@
 package org.jleopard.mall.config;
 
-import org.jleopard.mall.dao.config.DataSourceConfig;
 import org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -17,7 +16,7 @@ import org.springframework.context.annotation.Import;
  * </p>
  */
 @Configuration
-@ComponentScan(basePackages = "org.jleopard.mall.service")
+@ComponentScan(basePackages = "org.jleopard.mall.service.impl")
 @Import({DataSourceConfig.class})
 public class RootConfig {
 
