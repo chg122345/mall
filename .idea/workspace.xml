@@ -6,51 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e143c60d-ff19-4106-97fe-304598bf5a77" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/mall-common/src/main/java/org/jleopard/util/MD5Utils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-common/src/main/java/org/jleopard/util/ParseMD5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-common/src/main/java/org/jleopard/util/PathUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-common/src/main/java/org/jleopard/util/RandomKeyUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-common/src/main/java/org/jleopard/util/VercodeUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-pojo/src/main/java/org/jleopard/mall/model/Address.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-pojo/src/main/java/org/jleopard/mall/model/AddressKey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-pojo/src/main/java/org/jleopard/mall/model/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-pojo/src/main/java/org/jleopard/mall/model/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-pojo/src/main/java/org/jleopard/mall/model/OrderItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-pojo/src/main/java/org/jleopard/mall/model/OrderItemKey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-pojo/src/main/java/org/jleopard/mall/model/OrderKey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-pojo/src/main/java/org/jleopard/mall/model/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-pojo/src/main/java/org/jleopard/mall/model/ProductKey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-service/src/main/java/org/jleopard/mall/service/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-common/src/main/java/org/jleopard/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-dao/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-dao/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-dao/src/main/java/org/jleopard/mall/config/DataSourceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-dao/src/main/java/org/jleopard/mall/config/DataSourceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-dao/src/main/java/org/jleopard/mall/dao/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/src/main/java/org/jleopard/mall/service/impl/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-dao/src/main/resources/mapper/UserMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-dao/target/classes/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-dao/target/classes/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-dao/target/classes/org/jleopard/mall/dao/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/mall-dao/target/classes/org/jleopard/mall/dao/UserMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-dao/target/classes/org/jleopard/mall/dao/config/DataSourceConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-pojo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-pojo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-pojo/src/main/java/org/jleopard/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-pojo/src/main/java/org/jleopard/mall/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-pojo/src/main/java/org/jleopard/mall/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-pojo/src/test/java/org/jleopard/AppTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-service/src/main/java/org/jleopard/mall/config/RootConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/src/main/java/org/jleopard/mall/config/RootConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-service/src/main/java/org/jleopard/mall/service/impl/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-service/src/main/java/org/jleopard/mall/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/src/main/java/org/jleopard/mall/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-service/target/classes/org/jleopard/mall/config/RootConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/target/classes/org/jleopard/mall/config/RootConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-service/target/classes/org/jleopard/mall/service/impl/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-service/target/classes/org/jleopard/mall/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/target/classes/org/jleopard/mall/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-web/target/classes/org/jleopard/mall/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/target/classes/org/jleopard/mall/controller/IndexController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-web/target/mall-web-1.0/WEB-INF/classes/org/jleopard/mall/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/target/mall-web-1.0/WEB-INF/classes/org/jleopard/mall/controller/IndexController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-web/target/mall-web-1.0/WEB-INF/lib/mall-dao-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/target/mall-web-1.0/WEB-INF/lib/mall-dao-1.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-web/target/mall-web-1.0/WEB-INF/lib/mall-service-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/target/mall-web-1.0/WEB-INF/lib/mall-service-1.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="e143c60d-ff19-4106-97fe-304598bf5a77" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/mall-pojo/target/" />
@@ -81,8 +37,8 @@
       <file leaf-file-name="IndexController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/IndexController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="50" column="5" lean-forward="true" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+            <state relative-caret-position="437">
+              <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1157,12 +1113,12 @@
       <workItem from="1532409604528" duration="597000" />
       <workItem from="1532414860391" duration="627000" />
       <workItem from="1532441702482" duration="3139000" />
-      <workItem from="1532481968738" duration="14133000" />
+      <workItem from="1532481968738" duration="14420000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54040000" />
+    <option name="totallyTimeSpent" value="54327000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1224,13 +1180,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mall-dao/src/main/java/org/jleopard/mall/model/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mall-dao/src/main/java/org/jleopard/mall/model/OrderItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1690,10 +1639,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/IndexController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="50" column="5" lean-forward="true" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+        <state relative-caret-position="437">
+          <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
