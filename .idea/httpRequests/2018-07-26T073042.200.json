@@ -1,0 +1,11 @@
+{
+  "code": 200,
+  "msg": "成功！",
+  "data": {
+    "cart": {
+      "items": {},
+      "totalNumber": 0,
+      "totalMoney": 0.0
+    }
+  }
+}

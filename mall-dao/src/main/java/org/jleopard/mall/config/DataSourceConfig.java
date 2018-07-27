@@ -1,6 +1,7 @@
 package org.jleopard.mall.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
+import org.apache.ibatis.logging.log4j.Log4jImpl;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
@@ -60,7 +61,7 @@ public class DataSourceConfig {
 
     private int maxPoolPreparedStatementPerConnectionSize = 20;
 
-    private String filters = "stat,wall,slf4j";
+    private String filters = "stat,wall";//log4j
 
     private String connectionProperties = "druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000";
 
@@ -100,6 +101,7 @@ public class DataSourceConfig {
         configuration.setMapUnderscoreToCamelCase(true);
         configuration.setUseGeneratedKeys(true);
         configuration.setUseColumnLabel(true);
+        configuration.setLogImpl(Log4jImpl.class);
         return configuration;
     }
 

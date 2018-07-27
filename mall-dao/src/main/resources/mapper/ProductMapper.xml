@@ -59,8 +59,6 @@
     select
     <include refid="Base_Column_List" />
     from ml_product
-    where id = #{id,jdbcType=VARCHAR}
-    and ml_category_id = #{mlCategoryId,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="org.jleopard.mall.model.ProductKey" >
     delete from ml_product
@@ -159,7 +157,6 @@
       </if>
     </set>
     where id = #{id,jdbcType=VARCHAR}
-      and ml_category_id = #{mlCategoryId,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="org.jleopard.mall.model.Product" >
     update ml_product
@@ -170,6 +167,5 @@
       imgs = #{imgs,jdbcType=VARCHAR},
       created = #{created,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=VARCHAR}
-      and ml_category_id = #{mlCategoryId,jdbcType=INTEGER}
   </update>
 </mapper>

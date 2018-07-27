@@ -20,7 +20,7 @@ public class User implements Serializable {
 
     private String role;
 
-    private Byte type;
+    private Byte type;  //账号是否正常类型
 
     private Date created;
 

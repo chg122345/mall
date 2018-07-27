@@ -5,9 +5,11 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 import org.springframework.core.io.Resource;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.context.support.ServletContextResource;
+import org.springframework.web.filter.DelegatingFilterProxy;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -22,6 +24,7 @@ import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 import org.thymeleaf.templatemode.TemplateMode;
 
+import javax.servlet.FilterRegistration;
 import javax.servlet.ServletContext;
 import java.util.ArrayList;
 import java.util.List;
@@ -172,4 +175,12 @@ public class AppConfig implements WebMvcConfigurer {
         rmhm.setInterceptors(interceptors);*/ //TODO
         return rmhm;
     }
+
+    /*@Bean
+    public void initializeSAMLFilter() {
+        FilterRegistration.Dynamic filterRegistration = servletContext.addFilter("shiroFilter", DelegatingFilterProxy.class);
+        filterRegistration.addMappingForUrlPatterns(null, false, "/*");
+        filterRegistration.setAsyncSupported(true);
+    }*/
+
 }

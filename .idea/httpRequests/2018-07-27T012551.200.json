@@ -1,0 +1,5 @@
+{
+  "code": 400,
+  "msg": "Authentication failed for token submission [org.apache.shiro.authc.UsernamePasswordToken - 80588182@qq.com, rememberMe=true].  Possible unexpected error? (Typical or expected login exceptions should extend from AuthenticationException).",
+  "data": {}
+}

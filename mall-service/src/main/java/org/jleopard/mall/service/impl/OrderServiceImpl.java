@@ -44,12 +44,14 @@ public class OrderServiceImpl implements OrderService {
         String orderId = RandomKeyUtils.generateString(Primarys.ORDER_ID);
         order.setId(orderId);
         order.setSerial(RandomOrderSerialKeyHelper.getInstance().getSerialKey());
-        List<OrderItem> orderItems = order.getOrderItem();
-        orderItems.stream().forEach(orderItem -> {
-            orderItem.setMlOrderId(orderId);
-            orderItemService.insert(orderItem);
-        });
-        return orderMapper.insertSelective(order) > 0 ? order : null;
+        if (orderMapper.insertSelective(order) > 0){
+            List<OrderItem> orderItems = order.getOrderItem();
+            orderItems.stream().forEach(orderItem -> {
+                orderItem.setMlOrderId(orderId);
+                orderItemService.insert(orderItem);
+            });
+        }
+        return  order;
     }
 
     @Override

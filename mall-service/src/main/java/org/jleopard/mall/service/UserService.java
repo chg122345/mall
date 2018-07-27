@@ -30,5 +30,5 @@ public interface UserService {
     boolean checkEmail(String email);
 
 
-
+    User selectByEmail(String email);
 }

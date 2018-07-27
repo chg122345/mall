@@ -134,7 +134,7 @@
       <if test="number != null and number != 0" >
         #{number,jdbcType=INTEGER},
       </if>
-      <if test="money != null money != 0.0" >
+      <if test="money != null and money != 0.0" >
         #{money,jdbcType=DOUBLE},
       </if>
       <if test="created != null" >

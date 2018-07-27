@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head><title>HTTP Status 500 – Internal Server Error</title>
+    <style type="text/css">h1 {
+        font-family: Tahoma, Arial, sans-serif;
+        color: white;
+        background-color: #525D76;
+        font-size: 22px;
+    }
+
+    h2 {
+        font-family: Tahoma, Arial, sans-serif;
+        color: white;
+        background-color: #525D76;
+        font-size: 16px;
+    }
+
+    h3 {
+        font-family: Tahoma, Arial, sans-serif;
+        color: white;
+        background-color: #525D76;
+        font-size: 14px;
+    }
+
+    body {
+        font-family: Tahoma, Arial, sans-serif;
+        color: black;
+        background-color: white;
+    }
+
+    b {
+        font-family: Tahoma, Arial, sans-serif;
+        color: white;
+        background-color: #525D76;
+    }
+
+    p {
+        font-family: Tahoma, Arial, sans-serif;
+        background: white;
+        color: black;
+        font-size: 12px;
+    }
+
+    a {
+        color: black;
+    }
+
+    a.name {
+        color: black;
+    }
+
+    .line {
+        height: 1px;
+        background-color: #525D76;
+        border: none;
+    }</style>
+</head>
+<body><h1>HTTP Status 500 – Internal Server Error</h1>
+<hr class="line"/>
+<p><b>Type</b> Exception Report</p>
+<p><b>Message</b> Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An
+    error happened during template parsing (template: &quot;ServletContext resource [&#47;WEB-INF&#47;templates&#47;regist.html]&quot;)
+</p>
+<p><b>Description</b> The server encountered an unexpected condition that prevented it from fulfilling the request.</p>
+<p><b>Exception</b></p>
+<pre>org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: &quot;ServletContext resource [&#47;WEB-INF&#47;templates&#47;regist.html]&quot;)
+	org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:982)
+	org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+</pre>
+<p><b>Root Cause</b></p>
+<pre>org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: &quot;ServletContext resource [&#47;WEB-INF&#47;templates&#47;regist.html]&quot;)
+	org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:235)
+	org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:354)
+	org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:187)
+	org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1325)
+	org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1069)
+	org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1008)
+	org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+</pre>
+<p><b>Root Cause</b></p>
+<pre>java.io.FileNotFoundException: Could not open ServletContext resource [&#47;WEB-INF&#47;templates&#47;regist.html]
+	org.springframework.web.context.support.ServletContextResource.getInputStream(ServletContextResource.java:159)
+	org.thymeleaf.spring5.templateresource.SpringResourceTemplateResource.reader(SpringResourceTemplateResource.java:103)
+	org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:223)
+	org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:354)
+	org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:187)
+	org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1325)
+	org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1069)
+	org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1008)
+	org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+</pre>
+<p><b>Note</b> The full stack trace of the root cause is available in the server logs.</p>
+<hr class="line"/>
+<h3>Apache Tomcat/9.0.10</h3></body>
+</html>

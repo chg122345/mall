@@ -1,0 +1,26 @@
+{
+  "code": 100,
+  "msg": "添加成功",
+  "data": {
+    "cart": {
+      "items": {
+        "pdqsa9s8ecusv0cift4xdbndjargtaqs": {
+          "product": {
+            "id": "pdqsa9s8ecusv0cift4xdbndjargtaqs",
+            "mlCategoryId": 1,
+            "name": "辣条",
+            "details": "非常好吃的辣条快来买吧",
+            "price": 56.2,
+            "stock": 8,
+            "imgs": "http:///",
+            "created": 1532628495000
+          },
+          "number": 6,
+          "money": 337.20000000000005
+        }
+      },
+      "totalNumber": 6,
+      "totalMoney": 337.20000000000005
+    }
+  }
+}

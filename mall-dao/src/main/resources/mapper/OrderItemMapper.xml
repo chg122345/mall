@@ -36,7 +36,7 @@
       <if test="mlOrderId != null">
         ml_order_id = #{mlOrderId,jdbcType=VARCHAR} and
       </if>
-      <if test="number != null number != 0" >
+      <if test="number != null and number != 0" >
         number = #{number,jdbcType=INTEGER} and
       </if>
       <if test="money != null and money != 0.0" >
@@ -111,7 +111,7 @@
   <update id="updateByPrimaryKeySelective" parameterType="org.jleopard.mall.model.OrderItem" >
     update ml_order_item
     <set >
-      <if test="number != null number != 0" >
+      <if test="number != null and number != 0" >
         number = #{number,jdbcType=INTEGER},
       </if>
       <if test="money != null and money != 0.0" >

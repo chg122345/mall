@@ -1,200 +1,398 @@
-POST http://localhost:8080/order?mlUserId=uuqtaxlfrz7oxetpykbpckk7dyqod0aq&mlAddressId=11
+GET http://localhost:8080/login?email=80588181@qq.com&password=123456789&nickname=GGGGG&role=user&type=1
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-07-25T100944.500.html
+<> 2018-07-27T021251.200.html
 
 ###
 
-POST http://localhost:8080/order?mlUserId=uuqtaxlfrz7oxetpykbpckk7dyqod0aq&mlAddressId=1111111111111111111111&number=5&money=242.5
+GET http://localhost:8080/index?email=80588181@qq.com&password=123456789&nickname=GGGGG&role=user&type=1
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-07-25T100445.400.html
+<> 2018-07-27T021237.200.html
 
 ###
 
-POST http://localhost:8080/order?mlUserId=uuqtaxlfrz7oxetpykbpckk7dyqod0aq&mlAddressId=1111111111111111111111&number=5&money=242.5
+GET http://localhost:8080/list?email=80588181@qq.com&password=123456789&nickname=GGGGG&role=user&type=1
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-07-25T100249.415.html
+<> 2018-07-27T021224.200.html
 
 ###
 
-POST http://localhost:8080/order?mlUserId=uuqtaxlfrz7oxetpykbpckk7dyqod0aq&mlAddressId=1111111111111111111111&number=5&money=242.5
+GET http://localhost:8080/index?email=80588181@qq.com&password=123456789&nickname=GGGGG&role=user&type=1
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-07-25T100141.415.html
+<> 2018-07-27T021202.200.html
 
 ###
 
-POST http://localhost:8080/order?mlUserId=uuqtaxlfrz7oxetpykbpckk7dyqod0aq&mlAddressId=1111111111111111111111&number=5&money=242.5
+GET http://localhost:8080/logout?email=80588181@qq.com&password=123456789&nickname=GGGGG&role=user&type=1
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-07-25T100138.415.html
+<> 2018-07-27T021147.200.html
 
 ###
 
-POST http://localhost:8080/order?mlUserId=uuqtaxlfrz7oxetpykbpckk7dyqod0aq&mlAddressId=1111111111111111111111&number=5&money=242.5
+POST http://localhost:8080/index?email=80588181@qq.com&password=123456789&nickname=GGGGG&role=user&type=1
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-07-25T095910.400.html
+<> 2018-07-27T021113.200.html
 
 ###
 
-POST http://localhost:8080/order?mlUserId=uuqtaxlfrz7oxetpykbpckk7dyqod0aq&mlAddressId=1111111111111111111111&number=5&money=242.5
+POST http://localhost:8080/logout?email=80588181@qq.com&password=123456789&nickname=GGGGG&role=user&type=1
 Accept: */*
 Cache-Control: no-cache
-
-<> 2018-07-25T095115.404.html
 
 ###
 
-POST http://localhost:8080/order?mlUserId=uuqtaxlfrz7oxetpykbpckk7dyqod0aq&mlAddressId=1111111111111111111111&number=5&money=242.5
+POST http://localhost:8080/index?email=80588181@qq.com&password=123456789&nickname=GGGGG&role=user&type=1
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-07-25T095113.404.html
+<> 2018-07-27T021034.200.html
 
 ###
 
-POST http://localhost:8080/order?mlUserId=uuqtaxlfrz7oxetpykbpckk7dyqod0aq&mlAddressId=1111111111111111111111&number=5&money=242.5
+POST http://localhost:8080/login?email=80588181@qq.com&password=123456789&nickname=GGGGG&role=user&type=1
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-07-25T095014.404.html
+<> 2018-07-27T021026.200.json
 
 ###
 
-POST http://localhost:8080/order?mlUserId=uuqtaxlfrz7oxetpykbpckk7dyqod0aq&mlAddressId=1111111111111111111111&number=5&money=242.5
+POST http://localhost:8080/register?email=80588181@qq.com&password=123456789&nickname=GGGGG&role=user&type=1
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-07-25T094937.404.html
+<> 2018-07-27T015129.200.json
 
 ###
 
-POST http://localhost:8080/order?mlUserId=uuqtaxlfrz7oxetpykbpckk7dyqod0aq&mlAddressId=1111111111111111111111&number=5&money=242.5
+POST http://localhost:8080/register?email=80588181@qq.com&password=123456789&nickname=GGGGG&role=user&type=1
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-07-25T094933.404.html
+<> 2018-07-27T014920.200.json
 
 ###
 
-GET http://localhost:8080/order?mlUserId=uuqtaxlfrz7oxetpykbpckk7dyqod0aq&mlAddressId=1111111111111111111111&number=5&money=242.5
+POST http://localhost:8080/register?email=80588181@qq.com&password=123456789&nickname=GGGGG&role=user&type=1
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-07-25T094926.404.html
+<> 2018-07-27T014144.200.json
 
 ###
 
-GET http://localhost:8080/user/uuqtaxlfrz7oxetpykbpckk7dyqod0aq?email=80588190@qq.com&nickname=GXF-MALL&password=123456789
+POST http://localhost:8080/regist?email=80588181@qq.com&password=123456789&nickname=GGGGG&role=user&type=1
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-07-25T011405.200.json
+<> 2018-07-27T014142.500.html
 
 ###
 
-POST http://localhost:8080/register?email=80588190@qq.com&nickname=GXF-MALL&password=123456789
+POST http://localhost:8080/login?email=80588182@qq.com&password=1234567890&nickname=GGGGG&role=user&type=1
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-07-25T124651.200.json
+<> 2018-07-27T014053.200.json
 
 ###
 
-GET http://localhost:8080/user/uuhesrks5t17zcxhxip5akhg58kol2b3?email=80588189@qq.com&nickname=GXF-MALL&password=123456789
+POST http://localhost:8080/login?email=80588182@qq.com&password=123456789&nickname=GGGGG&role=user&type=1
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-07-25T124531.200.json
+<> 2018-07-27T013607.200.json
 
 ###
 
-GET http://localhost:8080/user/uuhesrks5t17zcxhxip5akhg58kol2b3?email=80588189@qq.com&nickname=GXF-MALL&password=123456789
+POST http://localhost:8080/login?email=80588182@qq.com&password=123456789&nickname=GGGGG&role=user&type=1
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-07-25T120138.500.html
+<> 2018-07-27T013451.200.json
 
 ###
 
-GET http://localhost:8080/user/uuhesrks5t17zcxhxip5akhg58kol2b3?email=80588189@qq.com&nickname=GXF-MALL&password=123456789
+POST http://localhost:8080/login?email=80588182@qq.com&password=123456789&nickname=GGGGG&role=user&type=1
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-07-25T115530.500.html
+<> 2018-07-27T013228.200.json
 
 ###
 
-GET http://localhost:8080/user/uuhesrks5t17zcxhxip5akhg58kol2b3?email=80588189@qq.com&nickname=GXF-MALL&password=123456789
+POST http://localhost:8080/login?email=80588182@qq.com&password=123456789&nickname=GGGGG&role=user&type=1
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-07-25T115412.404.html
+<> 2018-07-27T013046.200.json
 
 ###
 
-POST http://localhost:8080/register?email=80588189@qq.com&nickname=GXF-MALL&password=123456789
+POST http://localhost:8080/login?email=80588182@qq.com&password=123456789&nickname=GGGGG&role=user&type=1
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-07-25T115115.500.html
+<> 2018-07-27T012702.200.json
 
 ###
 
-POST http://localhost:8080/register?email=80588188@qq.com&nickname=GXF-MALL&password=123456789
+POST http://localhost:8080/login?email=80588182@qq.com&password=123456789&nickname=GGGGG&role=user&type=1
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-07-25T114911.500.html
+<> 2018-07-27T012551.200.json
 
 ###
 
-POST http://localhost:8080/register?email=80588183@qq.com&nickname=GXF-MALL&password=123456789
+POST http://localhost:8080/login?email=80588182@qq.com&password=123456789&nickname=GGGGG&role=user&type=1
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-07-25T114321.500.html
+<> 2018-07-27T012412.200.json
 
 ###
 
-POST http://localhost:8080/register?email=8058818@qq.com&nickname=GXF-MALL&password=123456789
+POST http://localhost:8080/login?email=80588182@qq.com&password=123456789&nickname=GGGGG&role=user&type=1
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-07-25T114137.500.html
+<> 2018-07-27T012410.200.json
 
 ###
 
-POST http://localhost:8080/register?email=8058818@qq.com&nickname=GXF-MALL&password=123456789
+POST http://localhost:8080/login?email=80588182@qq.com&password=123456789&nickname=GGGGG&role=user&type=1
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-07-25T113940.500.html
+<> 2018-07-27T010101.200.json
 
 ###
 
-POST http://localhost:8080/register?email=8058818@qq.com&nickname=GXF-MALL&password=123456789
+POST http://localhost:8080/register?email=80588182@qq.com&password=123456789&nickname=GGGGG&role=user&type=1
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-07-25T113834.500.html
+<> 2018-07-27T010011.200.json
 
 ###
 
-POST http://localhost:8080/register
+POST http://localhost:8080/register?email=80588183@qq.com&password=123456789&nickname=GGGGG&role=user&type=1
 Accept: */*
 Cache-Control: no-cache
 
-<> 2018-07-25T113540.500.html
+<> 2018-07-27T125929.200.json
+
+###
+
+POST http://localhost:8080/login?email=80588183@qq.com&password=123456789
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-27T125718.200.json
+
+###
+
+POST http://localhost:8080/shiro/login?email=80588183@qq.com&password=123456789
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-27T125658.404.html
+
+###
+
+POST http://localhost:8080/shiro/login?email=80588183@qq.com&password=123456789
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-27T104625.500.html
+
+###
+
+POST http://localhost:8080/shiro/login?email=80588183@qq.com&password=123456789
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-27T104007.500.html
+
+###
+
+POST http://localhost:8080/shiro/login?email=80588183@qq.com&password=123456789
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-27T102754.500.html
+
+###
+
+POST http://localhost:8080/shiro/login?id=pd0v3ytxuvvnh91ejgwweqhqxxa0ts2z&number=3
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-27T102720.400.html
+
+###
+
+POST http://localhost:8080/cart/clear?id=pd0v3ytxuvvnh91ejgwweqhqxxa0ts2z&number=3
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-26T073652.200.json
+
+###
+
+POST http://localhost:8080/cart/del?id=pd0v3ytxuvvnh91ejgwweqhqxxa0ts2z&number=3
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-26T073626.200.json
+
+###
+
+POST http://localhost:8080/cart/add?id=pd0v3ytxuvvnh91ejgwweqhqxxa0ts2z&number=3
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-26T073551.200.json
+
+###
+
+POST http://localhost:8080/cart/add?id=pdqsa9s8ecusv0cift4xdbndjargtaqs&number=3
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-26T073522.200.json
+
+###
+
+POST http://localhost:8080/cart/add?id=pdqsa9s8ecusv0cift4xdbndjargtaqs&number=3
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-26T073431.200.json
+
+###
+
+POST http://localhost:8080/cart/clear?id=pdqsa9s8ecusv0cift4xdbndjargtaqs&number=3
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-26T073427.200.json
+
+###
+
+POST http://localhost:8080/cart/del?id=pdqsa9s8ecusv0cift4xdbndjargtaqs&number=3
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-26T073420.200.json
+
+###
+
+POST http://localhost:8080/user/del?id=pdqsa9s8ecusv0cift4xdbndjargtaqs&number=3
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-26T073217.500.html
+
+###
+
+POST http://localhost:8080/user/del?id=pdqsa9s8ecusv0cift4xdbndjargtaqs&number=3
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-26T073122.200.json
+
+###
+
+POST http://localhost:8080/user/add?id=pdqsa9s8ecusv0cift4xdbndjargtaqs&number=3
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-26T073117.200.json
+
+###
+
+POST http://localhost:8080/user/add?id=pdqsa9s8ecusv0cift4xdbndjargtaqs&number=3
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-26T073109.200.json
+
+###
+
+POST http://localhost:8080/user/get?id=pdqsa9s8ecusv0cift4xdbndjargtaqs&number=3
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-26T073042.200.json
+
+###
+
+POST http://localhost:8080/user/del?id=pdqsa9s8ecusv0cift4xdbndjargtaqs&number=3
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-26T073035.200.json
+
+###
+
+POST http://localhost:8080/user/get?id=pdqsa9s8ecusv0cift4xdbndjargtaqs&number=3
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-26T073019.200.json
+
+###
+
+POST http://localhost:8080/user/add?id=pdqsa9s8ecusv0cift4xdbndjargtaqs&number=3
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-26T073015.200.json
+
+###
+
+POST http://localhost:8080/user/add?id=pdqsa9s8ecusv0cift4xdbndjargtaqs&number=3
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-26T073013.200.json
+
+###
+
+POST http://localhost:8080/user/add?id=pdqsa9s8ecusv0cift4xdbndjargtaqs&number=3
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-26T073009.200.json
+
+###
+
+POST http://localhost:8080/user/get?id=pdqsa9s8ecusv0cift4xdbndjargtaqs&number=3
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-26T072938.200.json
+
+###
+
+POST http://localhost:8080/user/get?id=pdqsa9s8ecusv0cift4xdbndjargtaqs&number=3
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-26T072908.200.json
 
 ###
 

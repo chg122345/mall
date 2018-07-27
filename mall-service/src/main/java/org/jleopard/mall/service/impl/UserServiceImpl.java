@@ -69,4 +69,15 @@ public class UserServiceImpl implements UserService {
         user.setEmail(email);
         return !CollectionUtils.isEmpty(selectBySelective(user));
     }
+
+    @Override
+    public User selectByEmail(String email) {
+        User user = new User();
+        user.setEmail(email);
+        List<User> list = this.selectBySelective(user);
+        if (!CollectionUtils.isEmpty(list)){
+            return list.get(0);
+        }
+        return null;
+    }
 }

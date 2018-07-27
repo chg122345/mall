@@ -1,0 +1,15 @@
+{
+  "code": 200,
+  "msg": "成功！",
+  "data": {
+    "info": {
+      "id": "uuyxq90fsjf16pfs47x2phwy8efjgysg",
+      "email": "80588181@qq.com",
+      "nickname": "GGGGG",
+      "password": "d08a47b13ff6cbde6e00fe3d7c9bf736",
+      "role": "user",
+      "type": 1,
+      "created": null
+    }
+  }
+}

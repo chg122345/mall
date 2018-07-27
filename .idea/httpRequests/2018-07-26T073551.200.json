@@ -1,0 +1,40 @@
+{
+  "code": 100,
+  "msg": "添加成功",
+  "data": {
+    "cart": {
+      "items": {
+        "pd0v3ytxuvvnh91ejgwweqhqxxa0ts2z": {
+          "product": {
+            "id": "pd0v3ytxuvvnh91ejgwweqhqxxa0ts2z",
+            "mlCategoryId": 1,
+            "name": "辣条",
+            "details": "非常好吃的辣条",
+            "price": 25.3,
+            "stock": 9,
+            "imgs": "http:///",
+            "created": 1532628534000
+          },
+          "number": 3,
+          "money": 75.9
+        },
+        "pdqsa9s8ecusv0cift4xdbndjargtaqs": {
+          "product": {
+            "id": "pdqsa9s8ecusv0cift4xdbndjargtaqs",
+            "mlCategoryId": 1,
+            "name": "辣条",
+            "details": "非常好吃的辣条快来买吧",
+            "price": 56.2,
+            "stock": 8,
+            "imgs": "http:///",
+            "created": 1532628495000
+          },
+          "number": 6,
+          "money": 337.20000000000005
+        }
+      },
+      "totalNumber": 9,
+      "totalMoney": 413.1
+    }
+  }
+}
