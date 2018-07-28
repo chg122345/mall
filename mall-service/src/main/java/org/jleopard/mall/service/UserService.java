@@ -31,4 +31,6 @@ public interface UserService {
 
 
     User selectByEmail(String email);
+
+    List<User> selectAll();
 }

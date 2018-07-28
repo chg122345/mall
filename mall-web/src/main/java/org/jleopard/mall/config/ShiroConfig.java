@@ -78,8 +78,8 @@ public class ShiroConfig {
         chainMap.put("/static/**","anon");
         chainMap.put("/favicon.ico", "anon");
         chainMap.put("/logout","logout");
-        chainMap.put("/index","user");
-        chainMap.put("/**","authc");
+       // chainMap.put("/index","user");
+        chainMap.put("/**","anon");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(chainMap);
         return shiroFilterFactoryBean;
     }

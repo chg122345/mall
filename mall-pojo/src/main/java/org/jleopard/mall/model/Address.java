@@ -1,5 +1,6 @@
 package org.jleopard.mall.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.ToString;
 
 import java.io.Serializable;
@@ -18,6 +19,7 @@ public class Address extends AddressKey implements Serializable {
 
     private String place;
 
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
     private Date created;
 
     public String getName() {

@@ -1,5 +1,6 @@
 package org.jleopard.mall.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.ToString;
 
 import java.io.Serializable;
@@ -20,6 +21,7 @@ public class Product extends ProductKey implements Serializable {
 
     private String imgs;
 
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
     private Date created;
 
     public String getName() {

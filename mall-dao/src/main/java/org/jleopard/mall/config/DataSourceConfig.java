@@ -1,7 +1,11 @@
 package org.jleopard.mall.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInterceptor;
 import org.apache.ibatis.logging.log4j.Log4jImpl;
+import org.apache.ibatis.plugin.Interceptor;
+import org.apache.ibatis.plugin.Plugin;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
@@ -114,6 +118,8 @@ public class DataSourceConfig {
             sqlSessionFactoryBean.setConfiguration(getConfiguration());
             sqlSessionFactoryBean.setMapperLocations(resourcePatternResolver.getResources("classpath:mapper/*.xml"));
             sqlSessionFactoryBean.setTypeAliasesPackage("org.jleopard.mall.dao");
+            PageInterceptor pageInterceptor = this.pageInterceptor();
+            sqlSessionFactoryBean.setPlugins(new Interceptor[]{pageInterceptor});
         } catch (IOException e) {
             throw new RuntimeException("初始化sessionFactoryBean失败.." , e);
         }
@@ -137,4 +143,15 @@ public class DataSourceConfig {
         interceptor.setTransactionAttributes(transactionAttributes);
         return interceptor;
     }
+
+    public PageInterceptor pageInterceptor(){
+        PageInterceptor pageInterceptor = new PageInterceptor();
+        Properties prop = new Properties();
+        prop.setProperty("helperDialect","mysql");
+        prop.setProperty("offsetAsPageNum","true");
+        prop.setProperty("rowBoundsWithCount","true");
+        pageInterceptor.setProperties(prop);
+        return pageInterceptor;
+    }
+
 }

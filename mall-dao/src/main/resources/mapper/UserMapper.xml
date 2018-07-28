@@ -20,6 +20,12 @@
     where id = #{id,jdbcType=VARCHAR}
   </select>
 
+  <select id="selectAll" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from ml_user
+
+  </select>
   <select id="selectBySelective" resultMap="BaseResultMap" parameterType="org.jleopard.mall.model.User" >
     select
     <include refid="Base_Column_List" />
@@ -32,19 +38,19 @@
         email = #{email,jdbcType=VARCHAR} and
       </if>
       <if test="nickname != null" >
-       nickname = #{nickname,jdbcType=VARCHAR} and
+        nickname = #{nickname,jdbcType=VARCHAR} and
       </if>
       <if test="password != null" >
-       password = #{password,jdbcType=VARCHAR} and
+        password = #{password,jdbcType=VARCHAR} and
       </if>
       <if test="role != null" >
-       role = #{role,jdbcType=VARCHAR} and
+        role = #{role,jdbcType=VARCHAR} and
       </if>
       <if test="type != null and type != 0" >
-      type = #{type,jdbcType=TINYINT} and
+        type = #{type,jdbcType=TINYINT} and
       </if>
       <if test="created != null" >
-      created = #{created,jdbcType=TIMESTAMP}
+        created = #{created,jdbcType=TIMESTAMP}
       </if>
     </trim>
   </select>

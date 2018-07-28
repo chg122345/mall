@@ -10,6 +10,7 @@ import org.springframework.core.io.Resource;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.context.support.ServletContextResource;
 import org.springframework.web.filter.DelegatingFilterProxy;
+import org.springframework.web.filter.HttpPutFormContentFilter;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -174,6 +175,11 @@ public class AppConfig implements WebMvcConfigurer {
        /* Object[] interceptors = {new TokenInterceptor()};
         rmhm.setInterceptors(interceptors);*/ //TODO
         return rmhm;
+    }
+
+    @Bean
+    public HttpPutFormContentFilter httpPutFormContentFilter() {
+        return new HttpPutFormContentFilter();
     }
 
     /*@Bean

@@ -1,5 +1,6 @@
 package org.jleopard.mall.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.ToString;
 
 import java.io.Serializable;
@@ -14,6 +15,7 @@ public class Category implements Serializable {
 
     private String name;
 
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
     private Date created;
 
     public Integer getId() {

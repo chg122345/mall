@@ -45,6 +45,13 @@ public class IndexController extends BaseController{
         return mv;
     }
 
+    @RequestMapping("/user/{page}")
+    public ModelAndView page(@PathVariable("page") String page) {
+
+        ModelAndView mv = getModelAndView("user/" + page);
+        return mv;
+    }
+
     @PostMapping("/register")
     public Msg register(User user){
        if (userService.checkEmail(user.getEmail())){
@@ -58,14 +65,14 @@ public class IndexController extends BaseController{
        return Msg.fail();
     }
 
-    @GetMapping(value = "/user/{id}")
+   /* @GetMapping(value = "/user/{id}")
     public Msg getUser(@PathVariable("id") String id){
         User u = userService.selectById(id);
         if (u != null){
             return Msg.success().put("user",u);
         }
         return Msg.fail();
-    }
+    }*/
 
     @PostMapping(value = "/order")
     public Msg order(@RequestParam("mlUserId") String uid, @RequestParam("mlAddressId") Integer aid){
