@@ -1,5 +1,6 @@
 package org.jleopard.mall.controller;
 
+import org.apache.shiro.authz.annotation.RequiresAuthentication;
 import org.jleopard.Msg;
 import org.jleopard.mall.model.Order;
 import org.jleopard.mall.model.OrderItem;
@@ -38,14 +39,15 @@ public class IndexController extends BaseController{
      * @param page
      * @return
      */
-    @RequestMapping("/{page}")
+    @GetMapping("/{page}")
     public ModelAndView skippage(@PathVariable("page") String page) {
 
         ModelAndView mv = getModelAndView(page);
         return mv;
     }
 
-    @RequestMapping("/user/{page}")
+    @RequiresAuthentication
+    @GetMapping("/user/{page}")
     public ModelAndView page(@PathVariable("page") String page) {
 
         ModelAndView mv = getModelAndView("user/" + page);

@@ -1,6 +1,7 @@
 package org.jleopard.mall.dao;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.jleopard.mall.model.Product;
 import org.jleopard.mall.model.ProductKey;
 
@@ -14,6 +15,8 @@ public interface ProductMapper {
     int insert(Product record);
 
     int insertSelective(Product record);
+
+    Product selectById(@Param("id") String id);
 
     List<Product> selectByPrimaryKey(ProductKey key);
 

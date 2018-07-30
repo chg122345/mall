@@ -1,9 +1,15 @@
 {
 	"contentManagement": [
 		{
-			"title": "文章列表",
-			"icon": "icon-text",
-			"href": "/news/newsList",
+			"title": "商品列表",
+			"icon": "&#xe62e;",
+			"href": "/a/productList",
+			"spread": false
+		},
+		{
+			"title": "订单列表",
+			"icon": "&#xe62d;",
+			"href": "/a/orderList",
 			"spread": false
 		},
 		{

@@ -29,6 +29,7 @@
         <classmate.version>1.3.4</classmate.version>
         <jackson.version>2.9.6</jackson.version>
         <shiro.version>1.4.0</shiro.version>
+        <aspectj.version>1.9.1</aspectj.version>
     </properties>
 
 <dependencyManagement>
@@ -115,13 +116,6 @@
         <version>${classmate.version}</version>
     </dependency>
     <dependency>
-        <groupId>com.fasterxml.jackson</groupId>
-        <artifactId>jackson-bom</artifactId>
-        <version>${jackson.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-    </dependency>
-    <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-core</artifactId>
         <version>${jackson.version}</version>
@@ -135,6 +129,22 @@
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-annotations</artifactId>
         <version>${jackson.version}</version>
+    </dependency>
+<!--aop-->
+    <dependency>
+        <groupId>aopalliance</groupId>
+        <artifactId>aopalliance</artifactId>
+        <version>1.0</version>
+    </dependency>
+    <dependency>
+        <groupId>org.aspectj</groupId>
+        <artifactId>aspectjrt</artifactId>
+        <version>${aspectj.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.aspectj</groupId>
+        <artifactId>aspectjweaver</artifactId>
+        <version>${aspectj.version}</version>
     </dependency>
    <!-- shiro-->
     <dependency>
@@ -169,7 +179,11 @@
         <artifactId>thymeleaf-spring5</artifactId>
         <version>${thymeleaf.version}</version>
     </dependency>
-
+    <dependency>
+        <groupId>com.github.theborakompanioni</groupId>
+        <artifactId>thymeleaf-extras-shiro</artifactId>
+        <version>2.0.0</version>
+    </dependency>
     <!--   mybatis pageHelper 数据库相关-->
     <dependency>
         <groupId>org.mybatis</groupId>

@@ -7,6 +7,7 @@ import org.jleopard.mall.service.UserService;
 import org.jleopard.util.RandomKeyUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 
 import java.util.List;
@@ -26,6 +27,7 @@ public class UserServiceImpl implements UserService {
     @Autowired
     UserMapper userMapper;
 
+    @Transactional
     @Override
     public int deleteById(String id) {
         return userMapper.deleteByPrimaryKey(id);

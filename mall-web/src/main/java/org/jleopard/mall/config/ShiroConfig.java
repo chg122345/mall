@@ -14,6 +14,7 @@ import org.jleopard.mall.shiro.ShiroPermFilter;
 import org.jleopard.mall.shiro.ShiroRealmImpl;
 import org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.HandlerExceptionResolver;
 
@@ -30,6 +31,7 @@ import java.util.Map;
  * </p>
  */
 @Configuration
+@ComponentScan(basePackages = "org.jleopard.mall.controller" )
 public class ShiroConfig {
 
 
@@ -79,7 +81,7 @@ public class ShiroConfig {
         chainMap.put("/favicon.ico", "anon");
         chainMap.put("/logout","logout");
        // chainMap.put("/index","user");
-        chainMap.put("/**","anon");
+      //  chainMap.put("/**","anon");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(chainMap);
         return shiroFilterFactoryBean;
     }
@@ -129,12 +131,12 @@ public class ShiroConfig {
         return defaultWebSessionManager;
     }
 
-    @Bean
+   /* @Bean
    public DefaultAdvisorAutoProxyCreator defaultAdvisorAutoProxyCreator(){
        DefaultAdvisorAutoProxyCreator advisorAutoProxyCreator = new DefaultAdvisorAutoProxyCreator();
        advisorAutoProxyCreator.setProxyTargetClass(true);
        return advisorAutoProxyCreator;
-   }
+   }*/
 
     @Bean(name = "lifecycleBeanPostProcessor")
     public LifecycleBeanPostProcessor getLifecycleBeanPostProcessor() {
@@ -146,7 +148,7 @@ public class ShiroConfig {
      * 注册全局异常处理
      * @return
      */
-    @Bean(name = "exceptionHandler")
+    @Bean(name = "exceptionResolver")
     public HandlerExceptionResolver handlerExceptionResolver(){
         return new GlobalExceptionResolver();
     }

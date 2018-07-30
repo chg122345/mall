@@ -1,6 +1,7 @@
 package org.jleopard.mall.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.servlet.ModelAndView;
@@ -18,6 +19,14 @@ import javax.servlet.http.HttpSession;
  */
 @Controller
 public class BaseController {
+
+
+    /*@ExceptionHandler
+    public String exp(HttpServletRequest request, Exception ex) {
+        request.setAttribute("ex", ex);
+            return "/404";
+
+    }*/
 
     /**
      * 得到ModelAndView

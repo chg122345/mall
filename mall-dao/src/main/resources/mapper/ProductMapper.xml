@@ -27,6 +27,12 @@
       </if>
     </trim>
   </select>
+  <select id="selectById" resultMap="BaseResultMap" parameterType="java.lang.String">
+    select
+    <include refid="Base_Column_List" />
+    from ml_product
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
   <select id="selectBySelective" resultMap="BaseResultMap" parameterType="org.jleopard.mall.model.Product">
     select
     <include refid="Base_Column_List" />
@@ -154,6 +160,9 @@
       </if>
       <if test="created != null" >
         created = #{created,jdbcType=TIMESTAMP},
+      </if>
+      <if test="mlCategoryId != null" >
+        ml_category_id = #{mlCategoryId,jdbcType=INTEGER},
       </if>
     </set>
     where id = #{id,jdbcType=VARCHAR}

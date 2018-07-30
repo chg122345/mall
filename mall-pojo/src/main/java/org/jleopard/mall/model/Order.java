@@ -15,7 +15,7 @@ public class Order extends OrderKey implements Serializable {
 
     private String serial; // 18位订单编号
 
-    private Byte status;
+    private Byte status;  // 1->待付款 2-> 待发货 3-> 已发货 4-> 交易成功
 
     private Integer number;
 

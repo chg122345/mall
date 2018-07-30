@@ -18,6 +18,11 @@
   <sql id="Base_Column_List" >
     id, ml_user_id, ml_address_id, serial, status, number, money, created
   </sql>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from ml_order
+  </select>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="org.jleopard.mall.model.OrderKey" >
     select 
     <include refid="Base_Column_List" />

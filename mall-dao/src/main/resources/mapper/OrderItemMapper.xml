@@ -7,6 +7,8 @@
     <result column="number" property="number" jdbcType="INTEGER" />
     <result column="money" property="money" jdbcType="DOUBLE" />
     <result column="ml_product_id" property="mlProductId" jdbcType="VARCHAR" />
+    <association property="product" javaType="org.jleopard.mall.model.Product"
+                select="org.jleopard.mall.dao.ProductMapper.selectById" column="ml_product_id"/>
   </resultMap>
   <sql id="Base_Column_List" >
     id, ml_order_id, number, money, ml_product_id

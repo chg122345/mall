@@ -3,6 +3,7 @@ package org.jleopard.mall.model;
 import lombok.ToString;
 
 import java.io.Serializable;
+import java.util.List;
 
 @ToString
 public class OrderItem extends OrderItemKey implements Serializable {
@@ -15,6 +16,8 @@ public class OrderItem extends OrderItemKey implements Serializable {
     private Double money;
 
     private String mlProductId;
+
+    private Product product;
 
     public Integer getNumber() {
         return number;
@@ -38,5 +41,13 @@ public class OrderItem extends OrderItemKey implements Serializable {
 
     public void setMlProductId(String mlProductId) {
         this.mlProductId = mlProductId == null ? null : mlProductId.trim();
+    }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
     }
 }

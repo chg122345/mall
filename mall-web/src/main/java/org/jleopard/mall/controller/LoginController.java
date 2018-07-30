@@ -1,5 +1,6 @@
 package org.jleopard.mall.controller;
 
+import lombok.extern.log4j.Log4j;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
@@ -15,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpSession;
+
 import static org.jleopard.AttributeKeys.USER_SESSION;
 
 /**
@@ -27,16 +30,18 @@ import static org.jleopard.AttributeKeys.USER_SESSION;
  * </p>
  */
 @RestController
-@Slf4j
+@Log4j
 public class LoginController extends BaseController{
 
     @Autowired
     private UserService userService;
 
     @PostMapping("/login")
-    public Msg login(@RequestParam("email") String email
-            , @RequestParam("password") String password){
-
+    public Msg login(HttpSession session, @RequestParam("email") String email
+            , @RequestParam("password") String password, @RequestParam("vercode") String vercode){
+        if (!vercode.toLowerCase().equals(session.getAttribute("imageCode").toString().toLowerCase())) {
+            return Msg.msg("验证码不对");
+        }
         Subject subject = SecurityUtils.getSubject();
         if(!subject.isAuthenticated()) {
            try {

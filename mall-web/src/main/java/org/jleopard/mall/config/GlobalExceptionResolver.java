@@ -1,9 +1,8 @@
 package org.jleopard.mall.config;
 
-import lombok.extern.slf4j.Slf4j;
-import org.apache.shiro.authz.UnauthorizedException;
-import org.jleopard.Msg;
-import org.springframework.web.bind.annotation.ResponseBody;
+import lombok.extern.log4j.Log4j;
+import org.apache.shiro.ShiroException;
+import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerExceptionResolver;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -15,28 +14,26 @@ import javax.servlet.http.HttpServletResponse;
  * @DateTime 2018-07-26  上午10:42
  *
  * <p>
- * 众里寻他千百度，蓦然回首，那人却在，灯火阑珊处。
  * Find a way for success and not make excuses for failure.
  * </p>
  */
-@Slf4j
+@Log4j
+@Component
 public class GlobalExceptionResolver implements HandlerExceptionResolver {
 
-   // @ResponseBody
     @Override
     public ModelAndView resolveException(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, Exception e) {
-        ModelAndView mv;
-        //进行异常判断。如果捕获异常请求跳转。
-        if(e instanceof UnauthorizedException){
-            mv = new ModelAndView("/login");
-            return mv;
-        }else {
-            mv = new ModelAndView();
-            log.error("", e);
-           mv.addObject(Msg.msg("服务器异常"));
-            return mv;
 
+        String requestType = httpServletRequest.getHeader("X-Requested-With");
+        if(e instanceof ShiroException){
+            httpServletResponse.setStatus(403);//无权限异常  主要用于ajax请求返回
+            httpServletResponse.addHeader("Error-Json", "{\"code\":403,\"msg\":\""+e.getMessage()+"\"}");
+            httpServletResponse.setContentType("text/html;charset=utf-8");
+            if("XMLHttpRequest".equals(requestType)){
+                return new ModelAndView();
+            }
+            return new ModelAndView("403").addObject("exception" ,e);
         }
-
+        return null;
     }
 }

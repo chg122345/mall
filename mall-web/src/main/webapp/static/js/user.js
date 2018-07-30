@@ -9,8 +9,8 @@ layui.use(['form','layer','laydate','table','laytpl'],function(){
     //添加验证规则
     form.verify({
         oldPwd : function(value, item){
-            if(value != "123456"){
-                return "密码错误，请重新输入！";
+            if(value.length < 6){
+                return "密码长度不能小于6位";
             }
         },
         newPwd : function(value, item){
@@ -23,7 +23,7 @@ layui.use(['form','layer','laydate','table','laytpl'],function(){
                 return "两次输入密码不一致，请重新输入！";
             }
         }
-    })
+    });
 
     //用户等级
     table.render({

@@ -5,7 +5,7 @@ layui.define(["form","jquery"],function(exports){
         provinces : function() {
             //加载省数据
             var proHtml = '',that = this;
-            $.get("../../json/address.json", function (data) {
+            $.get("/static/json/address.json", function (data) {
                 for (var i = 0; i < data.length; i++) {
                     proHtml += '<option value="' + data[i].code + '">' + data[i].name + '</option>';
                 }

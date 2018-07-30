@@ -68,4 +68,9 @@ public class OrderServiceImpl implements OrderService {
     public Order updateByIdSelective(Order order) {
         return orderMapper.updateByPrimaryKeySelective(order) > 0 ? order : null;
     }
+
+    @Override
+    public List<Order> select() {
+        return orderMapper.selectAll();
+    }
 }

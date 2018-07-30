@@ -3,7 +3,7 @@ layui.config({
 	base : "/static/js/"
 }).extend({
 	"bodyTab" : "bodyTab"
-})
+});
 layui.use(['bodyTab','form','element','layer','jquery'],function(){
 	var form = layui.form,
 		element = layui.element;
@@ -13,7 +13,7 @@ layui.use(['bodyTab','form','element','layer','jquery'],function(){
 			openTabNum : "50",  //最大可打开窗口数量
 			url : "/static/json/navs.json" //获取菜单json地址
 		});
-
+    copyright();
 	//通过顶部菜单获取左侧二三级菜单   注：此处只做演示之用，实际开发中通过接口传参的方式获取导航数据
 	function getData(json){
 		$.getJSON(tab.tabConfig.url,function(data){
@@ -141,6 +141,17 @@ function addTab(_this){
 	tab.tabAdd(_this);
 }
 
+function copyright() {
+    $.ajax({
+        url : "/static/json/systemParameter.json",
+        type : "get",
+        dataType : "json",
+        success : function(data){
+        	$('#logo').html(data.logo)
+           $('#copyright').html(data.copyright);
+        }
+    })
+}
 //捐赠弹窗
 function donation(){
 	layer.tab({

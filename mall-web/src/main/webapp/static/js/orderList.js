@@ -5,36 +5,48 @@ layui.use(['form','layer','table','laytpl'],function(){
         laytpl = layui.laytpl,
         table = layui.table;
 
-    //用户列表
+    //订单列表
     var tableIns = table.render({
         elem: '#userList',
-        url : '/user/getUserList',
+        url : '/a/order',
         cellMinWidth : 95,
         page : true,
-        height : "full-125",
+        height : "full-400",
         limits : [10,15,20,25],
         limit : 20,
         id : "userListTable",
         cols : [[
             {type: "checkbox", fixed:"left", width:50},
-            {field: 'id', title: '用户ID', minWidth:100, align:"center"},
-            {field: 'nickname', title: '昵称', minWidth:100, align:"center",edit: 'text'},
-            {field: 'email', title: '用户邮箱', minWidth:200, align:'center',templet:function(d){
-                return '<a class="layui-blue" href="mailto:'+d.email+'">'+d.email+'</a>';
-            }},
-            {field: 'type', title: '用户状态',  align:'center',edit: 'text',templet:function(d){
-                return d.type == "1" ? "正常使用" : "限制使用";
-            }},
-            {field: 'role', title: '用户权限', align:'center',edit:'text',templet:function(d){
-                if(d.role == "admin"){
-                    return "管理员";
-                }else if(d.role == "user"){
-                    return "普通会员";
-                }else{
-                    return d.role;
+            {field: 'id', title: 'ID', minWidth:200, align:"center"},
+            {field: 'serial', title: '订单编号', minWidth:100, align:"center"},
+            {field: 'number', title: '订购数量', minWidth:50, align:'center'},
+            {field: 'money', title: '订单金额', minWidth:50, align:'center', edit:'number'},
+            {field: 'status', title: '订单状态', minWidth:50, align:'center',edit: 'text',templet:function(d){
+                var s = d.status;
+                if (s == 1){
+                    return "待付款";
+                } else if (s == 2){
+                    return "待发货";
+                } else if (s == 3){
+                    return "已发货";
+                } else if (s == 4){
+                    return "交易成功";
                 }
+                }},
+            {field: 'address', title: '收货信息', minWidth:100, align:'center',templet:function (d) {
+                    return "<p> 收货人：" + d.address.name +"</p><p>电话："+ d.address.phone +"</p><p>邮编："
+                        + d.address.postcode +"</p><p>地址："+ d.address.place +"</p>";
+                }},
+            {field: 'orderItem', title: '订单详情', align:'center',templet:function(d){
+                var it = d.orderItem;
+                var res = "";
+               $.each(it, function (index, oi) {
+                   res += "<p>产品：" + oi.product.name + "&nbsp;&nbsp;单价："+ oi.product.price +"</p><p><img height='100px;' src='"+oi.product.imgs +"'></p><p>购买数量："
+                       + oi.number +"&nbsp;&nbsp;小计：" + oi.money +"</p>";
+               });
+              return res;
             }},
-            {field: 'created', title: '注册时间', align:'center',minWidth:150,sort:true},
+            {field: 'created', title: '下单时间', align:'center',minWidth:150,sort:true},
             {title: '操作', minWidth:175, templet:'#userListBar',fixed:"right",align:"center"}
         ]]
     });
@@ -55,41 +67,6 @@ layui.use(['form','layer','table','laytpl'],function(){
         }
     });
 
-    //添加用户
-    function addUser(edit){
-        var index = layui.layer.open({
-            title : "添加用户",
-            type : 2,
-            content : "/user/userAdd",
-            success : function(layero, index){
-                var body = layui.layer.getChildFrame('body', index);
-                if(edit){
-                    body.find(".userName").val(edit.nickname);  //登录名
-                    body.find(".userEmail").val(edit.email);  //邮箱
-                   // body.find(".userSex input[value="+edit.userSex+"]").prop("checked","checked");  //性别
-                    body.find(".userGrade").val(edit.userGrade);  //会员等级
-                    body.find(".userStatus").val(edit.type);    //用户状态
-                    body.find(".userDesc").text(edit.userDesc);    //用户简介
-                    form.render();
-                }
-                setTimeout(function(){
-                    layui.layer.tips('点击此处返回用户列表', '.layui-layer-setwin .layui-layer-close', {
-                        tips: 3
-                    });
-                },500)
-            }
-        });
-        layui.layer.full(index);
-        window.sessionStorage.setItem("index",index);
-        //改变窗口大小时，重置弹窗的宽高，防止超出可视区域（如F12调出debug的操作）
-        $(window).on("resize",function(){
-            layui.layer.full(window.sessionStorage.getItem("index"));
-        })
-    }
-    $(".addNews_btn").click(function(){
-        addUser();
-    });
-
     //批量删除
     $(".delAll_btn").click(function(){
         var checkStatus = table.checkStatus('userListTable'),
@@ -99,10 +76,9 @@ layui.use(['form','layer','table','laytpl'],function(){
             for (var i in data) {
                 newsId += (data[i].id) + '-';
             }
-            layer.confirm('确定删除选中的用户？', {icon: 3, title: '提示信息'}, function (index) {
-                // console.log(newsId);
+            layer.confirm('确定删除选中的订单？', {icon: 3, title: '提示信息'}, function (index) {
                 $.ajax({
-                    url : "/user/user",
+                    url : "/a/order",
                     data: newsId,
                     type: "DELETE",
                     dataType: 'json',
@@ -118,20 +94,18 @@ layui.use(['form','layer','table','laytpl'],function(){
                 return false;
             })
         }else{
-            layer.msg("请选择需要删除的用户");
+            layer.msg("请选择需要删除的订单");
         }
     });
 
-   function updateUser(data){
+   function updateOrder(data){
        $.ajax({
-           url :'/user/user',
+           url :'/a/order',
            data :JSON.stringify({
                id : data.id,
-               email : data.email,
-               nickname : data.nickname,
-               //password : data.password,  //密码只能由用户自己通过验证邮箱改
-               role : data.role,
-               type : data.type }),
+               number : data.number,
+               money : data.money,
+               status : data.status }),
            type : 'PUT',
            dataType: 'json',
            contentType: 'application/json;charset=UTF-8',
@@ -157,7 +131,7 @@ layui.use(['form','layer','table','laytpl'],function(){
             data = obj.data;
 
         if(layEvent === 'edit'){ //更新
-            updateUser(data);
+            updateOrder(data);
         }/*else if(layEvent === 'usable'){ //启用禁用
             var _this = $(this),
                 usableText = "是否确定禁用此用户？",
@@ -181,7 +155,7 @@ layui.use(['form','layer','table','laytpl'],function(){
         }*/else if(layEvent === 'del'){ //删除
             layer.confirm('确定删除'+ data.id +'用户？',{icon:3, title:'提示信息'},function(index){
                 $.ajax({
-                    url : "/user/user",
+                    url : "/a/order",
                     data: data.id,
                     type: "DELETE",
                     dataType: 'json',

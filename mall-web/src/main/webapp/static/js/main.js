@@ -17,9 +17,10 @@ function getLangDate(){
     var hour = dateObj.getHours(); //当前系统时间的小时值
     var minute = dateObj.getMinutes(); //当前系统时间的分钟值
     var second = dateObj.getSeconds(); //当前系统时间的秒钟值
+    var username = document.getElementById("username") ==null ?'Chen_9g' :document.getElementById("username").value ;
     var timeValue = "" +((hour >= 12) ? (hour >= 18) ? "晚上" : "下午" : "上午" ); //当前时间属于上午、晚上还是下午
     newDate = dateFilter(year)+"年"+dateFilter(month)+"月"+dateFilter(date)+"日 "+" "+dateFilter(hour)+":"+dateFilter(minute)+":"+dateFilter(second);
-    document.getElementById("nowTime").innerHTML = "亲爱的驊驊龔頾，"+timeValue+"好！ 欢迎使用layuiCMS 2.0模版。当前时间为： "+newDate+"　"+week;
+    document.getElementById("nowTime").innerHTML = "亲爱的"+ username +timeValue+"好！ 欢迎使用Mall-Manager。当前时间为： "+newDate+"　"+week;
     setTimeout("getLangDate()",1000);
 }
 
@@ -83,7 +84,7 @@ layui.use(['form','element','layer','jquery'],function(){
         }
         $(".hot_news").html(hotNewsHtml);
         $(".userAll span").text(data.length);
-    })
+    });
 
     //用户数量
     $.get("/static/json/userList.json",function(data){
@@ -95,4 +96,4 @@ layui.use(['form','element','layer','jquery'],function(){
         $(".outIcons span").text(data.split(".icon-").length-1);
     })*/
 
-})
+});

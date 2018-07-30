@@ -1,14 +1,15 @@
 {
-	"cmsName": "layuiCMS后台管理模版",
-	"version": "v2.0",
-	"author": "驊驊龔頾",
-	"homePage": "index.html",
-	"server": "windows",
-	"dataBase": "8.00.2039",
-	"maxUpload": "2M",
-	"userRights": "超级管理员",
+	"cmsName": "mall后台管理",
+	"version": "v1.0",
+	"author": "Chen_9g",
+	"homePage": "/index",
+	"server": "linux",
+	"dataBase": "MySQL8.00.2039",
+	"maxUpload": "20M",
+	"userRights": "管理员",
 	"description": "这是马哥闲来无事做的一套基于layui的cms模版，纯静态页面，不包含数据库",
-	"powerby": "copyright @2017 驊驊龔頾",
-	"record": "京ICP备14040xxx号-1",
-	"keywords": "layuicms,马哥,layuicms2.0,后台模版,请叫我马哥,驊驊龔頾"
+	"logo": "Mall-Manage",
+	"copyright": "copyright @2018 <a href='http://www.jleopard.org' target='_blank'>JL社区提供</a>",
+	"record": "赣ICP备888888xxx号-1",
+	"keywords": "JL社区,Java共享社区,Jleopard"
 }

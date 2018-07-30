@@ -1,6 +1,7 @@
 package org.jleopard.mall.dao;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.jleopard.mall.model.User;
 
 import java.util.List;
@@ -9,7 +10,7 @@ import java.util.List;
 public interface UserMapper {
 
 
-    int deleteByPrimaryKey(String id);
+    int deleteByPrimaryKey(@Param("id") String id);
 
     int deleteBySelective(User record);
 

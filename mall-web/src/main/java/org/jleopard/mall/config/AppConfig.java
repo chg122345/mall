@@ -1,35 +1,31 @@
 package org.jleopard.mall.config;
 
+import at.pollux.thymeleaf.shiro.dialect.ShiroDialect;
+import org.jleopard.util.PathUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.core.io.Resource;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.context.support.ServletContextResource;
-import org.springframework.web.filter.DelegatingFilterProxy;
 import org.springframework.web.filter.HttpPutFormContentFilter;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
-import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.config.annotation.*;
 import org.springframework.web.servlet.handler.SimpleMappingExceptionResolver;
 import org.springframework.web.servlet.handler.SimpleUrlHandlerMapping;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
 import org.springframework.web.servlet.resource.ResourceHttpRequestHandler;
+import org.thymeleaf.dialect.IDialect;
 import org.thymeleaf.spring5.SpringTemplateEngine;
 import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 import org.thymeleaf.templatemode.TemplateMode;
 
-import javax.servlet.FilterRegistration;
 import javax.servlet.ServletContext;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Properties;
+import java.util.*;
 
 /**
  * @Copyright (c) 2018, Chen_9g 陈刚 (80588183@qq.com).
@@ -42,13 +38,25 @@ import java.util.Properties;
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = "org.jleopard.mall.controller" )
-public class AppConfig implements WebMvcConfigurer {
+@EnableAspectJAutoProxy
+public class AppConfig extends WebMvcConfigurerAdapter implements WebMvcConfigurer {
 
     @Autowired
     private ServletContext servletContext;
 
     @Autowired
     private ApplicationContext applicationContext;
+
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+
+        //addResourceHandler是指你想在url请求的路径
+
+        //addResourceLocations是图片存放的真实路径
+
+        registry.addResourceHandler("/avatar/**","/icon/**").addResourceLocations("file:"+ PathUtils.getUploadImgBasePath());
+        super.addResourceHandlers(registry);
+    }
 
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
@@ -77,6 +85,10 @@ public class AppConfig implements WebMvcConfigurer {
     public SpringTemplateEngine templateEngine() {
         SpringTemplateEngine templateEngine = new SpringTemplateEngine();
         templateEngine.setTemplateResolver(templateResolver());
+        // 整合shiro
+        Set<IDialect> additionalDialects = new HashSet<IDialect>();
+        additionalDialects.add(new ShiroDialect());
+        templateEngine.setAdditionalDialects(additionalDialects);
         templateEngine.setEnableSpringELCompiler(true);
         return templateEngine;
     }
@@ -147,14 +159,17 @@ public class AppConfig implements WebMvcConfigurer {
         return multipartResolver;
     }
 
-    @Bean
+   /* @Bean
     public SimpleMappingExceptionResolver simpleMappingExceptionResolver() {
 
         SimpleMappingExceptionResolver smer = new SimpleMappingExceptionResolver();
-
+        Properties prop = new Properties();
+        prop.setProperty("org.apache.shiro.ShiroException","/403");
+        smer.setExceptionMappings(prop);
+        smer.setDefaultErrorView("/404");
         return smer;
 
-    }
+    }*/
 
     @Bean
     public RestTemplate restTemplate(){
@@ -182,11 +197,5 @@ public class AppConfig implements WebMvcConfigurer {
         return new HttpPutFormContentFilter();
     }
 
-    /*@Bean
-    public void initializeSAMLFilter() {
-        FilterRegistration.Dynamic filterRegistration = servletContext.addFilter("shiroFilter", DelegatingFilterProxy.class);
-        filterRegistration.addMappingForUrlPatterns(null, false, "/*");
-        filterRegistration.setAsyncSupported(true);
-    }*/
 
 }
