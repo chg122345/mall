@@ -50,7 +50,7 @@ public class LoginController extends BaseController{
                subject.login(token);
                User user = userService.selectByEmail(email);
                SecurityUtils.getSubject().getSession().setAttribute(USER_SESSION, user);
-               return Msg.success().put("user", email+password);
+               return Msg.success().put("role", user.getRole());
            }catch (Exception e){
                return Msg.msg(400, e.getMessage());
            }

@@ -3,6 +3,7 @@ package org.jleopard.mall.controller;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import lombok.extern.log4j.Log4j;
+import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.jleopard.Msg;
 import org.jleopard.PageTable;
 import org.jleopard.mall.dao.CategoryMapper;
@@ -10,6 +11,7 @@ import org.jleopard.mall.model.Category;
 import org.jleopard.mall.model.Product;
 import org.jleopard.mall.model.ProductKey;
 import org.jleopard.mall.service.ProductService;
+import org.jleopard.mall.util.UploadFileHelper;
 import org.jleopard.util.PathUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
@@ -47,18 +49,35 @@ public class ProductController extends BaseController {
     @Autowired
     CategoryMapper categoryMapper;
 
+    /**
+     * 管理员角色访问 admin下的页面
+     * @param page
+     * @return
+     */
+    @RequiresRoles(value = {"admin"})
     @GetMapping("/{page}")
     public ModelAndView load(@PathVariable("page") String page){
 
         return getModelAndView("admin/" + page);
     }
 
+    /**
+     * 管理员添加商品页面
+     * @return
+     */
+    @RequiresRoles(value = {"admin"})
     @GetMapping("/productAdd")
     public ModelAndView addProductPage(){
         List<Category> categoryList = categoryMapper.selectAll();
         return getModelAndView("admin/productAdd").addObject(CATEGORY,categoryList);
     }
 
+    /**
+     * 展示商品
+     * @param page
+     * @param pageSize
+     * @return
+     */
     @GetMapping("/product")
     public PageTable getProduct(@RequestParam(value = "page", defaultValue = "1") Integer page,
                                 @RequestParam(value = "limit", defaultValue = "20") Integer pageSize){
@@ -79,6 +98,12 @@ public class ProductController extends BaseController {
         return Msg.fail();
     }
 
+    /**
+     * 添加商品
+     * @param product
+     * @return
+     */
+    @RequiresRoles(value = {"admin"})
     @PostMapping("/product")
     public Msg addProduct(Product product){
         log.info("产品信息-->" + product);
@@ -97,6 +122,12 @@ public class ProductController extends BaseController {
         return Msg.fail();
     }
 
+    /**
+     * 删除
+     * @param ids
+     * @return
+     */
+    @RequiresRoles(value = {"admin"})
     @DeleteMapping("/product")
     @Transactional
     public Msg deleteProduct(@RequestBody String ids){
@@ -115,20 +146,17 @@ public class ProductController extends BaseController {
         return Msg.success();
     }
 
+    /**
+     * 上传商品图片
+     * @param file
+     * @return
+     */
+    @RequiresRoles(value = {"admin"})
     @PostMapping("/upload")
     private Msg upload(MultipartFile file) {
         if (!file.isEmpty()) {
-            String path = PathUtils.getUploadImgBasePath();
-            String spath =  "product/";
-            String fileName = file.getOriginalFilename();  //statics/upload/top_1.jpg
-            String realPath = path + spath + fileName;
-            File filePath = new File(realPath);
-            if (!filePath.getParentFile().exists()) {
-                filePath.getParentFile().mkdirs();
-            }
             try {
-                file.transferTo(filePath);
-                String uri = "/icon/" + spath + fileName;
+                String uri = UploadFileHelper.upload("product/", file);
                 return Msg.success().put("uri",uri);
             } catch (IOException e) {
                 log.error("上传图片出错了..", e);

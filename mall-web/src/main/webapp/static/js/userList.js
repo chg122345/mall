@@ -60,7 +60,7 @@ layui.use(['form','layer','table','laytpl'],function(){
         var index = layui.layer.open({
             title : "添加用户",
             type : 2,
-            content : "/user/userAdd",
+            content : "/a/userAdd",
             success : function(layero, index){
                 var body = layui.layer.getChildFrame('body', index);
                 if(edit){

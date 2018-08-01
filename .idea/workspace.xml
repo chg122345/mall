@@ -7,62 +7,149 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e143c60d-ff19-4106-97fe-304598bf5a77" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/mall-common/src/main/java/org/jleopard/ResultKeys.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/OrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/VerCodeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/403.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/admin/orderList.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/static/js/orderList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/util/UploadFileHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/admin/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/common/__footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/common/__header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/common/__link_i.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/user/cart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/static/css/index_i.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/static/images/banner.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/static/images/wechat.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/static/js/cart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/static/js/index_i.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/static/js/register.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-dao/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-dao/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-dao/src/main/java/org/jleopard/mall/dao/CategoryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-dao/src/main/java/org/jleopard/mall/dao/CategoryMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-dao/src/main/java/org/jleopard/mall/dao/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-dao/src/main/java/org/jleopard/mall/dao/OrderMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-dao/src/main/java/org/jleopard/mall/dao/ProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-dao/src/main/java/org/jleopard/mall/dao/ProductMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-dao/src/main/java/org/jleopard/mall/dao/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-dao/src/main/java/org/jleopard/mall/dao/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-dao/src/main/resources/mapper/CategoryMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-dao/src/main/resources/mapper/CategoryMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-dao/src/main/resources/mapper/OrderItemMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-dao/src/main/resources/mapper/OrderItemMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-dao/src/main/resources/mapper/OrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-dao/src/main/resources/mapper/OrderMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-dao/src/main/resources/mapper/ProductMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-dao/src/main/resources/mapper/ProductMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-pojo/src/main/java/org/jleopard/mall/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-pojo/src/main/java/org/jleopard/mall/model/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-pojo/src/main/java/org/jleopard/mall/model/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-pojo/src/main/java/org/jleopard/mall/model/OrderItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-service/src/main/java/org/jleopard/mall/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/src/main/java/org/jleopard/mall/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-service/src/main/java/org/jleopard/mall/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/src/main/java/org/jleopard/mall/service/impl/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-service/src/main/java/org/jleopard/mall/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-service/src/main/java/org/jleopard/mall/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/config/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/src/main/java/org/jleopard/ResultKeys.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-common/src/main/java/org/jleopard/ResultKeys.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-pojo/src/main/java/org/jleopard/mall/model/CartItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-pojo/src/main/java/org/jleopard/mall/model/CartItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/config/GlobalExceptionResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/config/GlobalExceptionResolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/config/ShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/config/ShiroConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/BaseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/IndexController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/ShopCartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/ShopCartController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/shiro/ShiroRealmImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/shiro/ShiroRealmImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/common/__link.html" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/common/__link.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/css/layui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/css/layui.mobile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/css/modules/code.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/css/modules/laydate/default/laydate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/css/modules/layer/default/icon-ext.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/css/modules/layer/default/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/css/modules/layer/default/layer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/css/modules/layer/default/loading-0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/css/modules/layer/default/loading-1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/css/modules/layer/default/loading-2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/font/iconfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/font/iconfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/font/iconfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/font/iconfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/10.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/11.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/12.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/13.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/14.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/15.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/16.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/17.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/18.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/19.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/20.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/21.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/22.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/23.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/24.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/25.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/26.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/27.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/28.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/29.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/30.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/31.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/33.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/34.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/35.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/36.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/37.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/38.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/39.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/4.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/40.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/41.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/42.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/43.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/44.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/45.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/46.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/47.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/48.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/49.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/5.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/50.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/51.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/52.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/53.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/54.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/55.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/56.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/57.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/58.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/59.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/6.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/60.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/61.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/62.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/63.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/64.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/65.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/66.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/67.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/68.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/69.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/7.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/70.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/71.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/8.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/images/face/9.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/lay/modules/carousel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/lay/modules/code.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/lay/modules/element.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/lay/modules/flow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/lay/modules/form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/lay/modules/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/lay/modules/laydate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/lay/modules/layedit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/lay/modules/layer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/lay/modules/laypage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/lay/modules/laytpl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/lay/modules/mobile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/lay/modules/rate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/lay/modules/table.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/lay/modules/tree.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/lay/modules/upload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/lay/modules/util.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/layui.all.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/static/layui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/templates/common/__link.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/resources/templates/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/403.html" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/403.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/news/newsAdd.html" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/admin/productAdd.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/news/newsAdd.js" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/static/js/newsAdd.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/news/newsList.html" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/admin/productList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/news/newsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/static/js/newsList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/user/userGrade.html" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/user/userGrade.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/user/userList.html" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/user/userList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-web/src/main/webapp/static/css/public.css" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/static/css/public.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-web/src/main/webapp/static/js/address.js" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/static/js/address.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-web/src/main/webapp/static/js/bodyTab.js" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/static/js/bodyTab.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/admin/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/user/userAdd.html" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/admin/userAdd.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/user/userInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/admin/userInfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/user/userList.html" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/admin/userList.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mall-web/src/main/webapp/static/js/cache.js" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/static/js/cache.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-web/src/main/webapp/static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/static/js/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mall-web/src/main/webapp/static/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/static/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-web/src/main/webapp/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/static/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-web/src/main/webapp/static/js/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/static/js/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-web/src/main/webapp/static/js/userInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/static/js/userInfo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mall-web/src/main/webapp/static/js/userList.js" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/static/js/userList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-web/src/main/webapp/static/json/images.json" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/static/json/images.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mall-web/src/main/webapp/static/json/navs.json" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/static/json/navs.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall-web/src/main/webapp/static/json/systemParameter.json" beforeDir="false" afterPath="$PROJECT_DIR$/mall-web/src/main/webapp/static/json/systemParameter.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -97,141 +184,106 @@
     <session id="1869579696">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="12" />
+          <entry key="project.closed" value="18" />
+          <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.20" value="1" />
+          <entry key="project.open.time.20" value="2" />
           <entry key="project.open.time.26" value="2" />
+          <entry key="project.open.time.33" value="1" />
           <entry key="project.open.time.39" value="2" />
+          <entry key="project.open.time.43" value="1" />
           <entry key="project.open.time.46" value="2" />
-          <entry key="project.open.time.48" value="1" />
+          <entry key="project.open.time.48" value="2" />
+          <entry key="project.open.time.51" value="1" />
           <entry key="project.open.time.52" value="1" />
           <entry key="project.open.time.59" value="1" />
-          <entry key="project.open.time.69" value="1" />
+          <entry key="project.open.time.69" value="2" />
           <entry key="project.open.time.93" value="1" />
-          <entry key="project.opened" value="13" />
+          <entry key="project.opened" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="126" />
-          <entry key="css" value="13" />
-          <entry key="html" value="64" />
-          <entry key="java" value="210" />
-          <entry key="jpg" value="11" />
-          <entry key="js" value="88" />
-          <entry key="json" value="21" />
+          <entry key="class" value="131" />
+          <entry key="css" value="19" />
+          <entry key="html" value="114" />
+          <entry key="java" value="236" />
+          <entry key="jpg" value="13" />
+          <entry key="js" value="108" />
+          <entry key="json" value="25" />
+          <entry key="ml_address" value="1" />
+          <entry key="ml_category" value="1" />
+          <entry key="ml_user" value="1" />
           <entry key="png" value="8" />
           <entry key="properties" value="3" />
+          <entry key="sql" value="2" />
           <entry key="tld" value="1" />
-          <entry key="ts" value="2" />
-          <entry key="xml" value="45" />
+          <entry key="ts" value="3" />
+          <entry key="xml" value="46" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="126" />
-          <entry key="CSS" value="13" />
-          <entry key="HTML" value="64" />
-          <entry key="Image" value="19" />
-          <entry key="JAVA" value="210" />
-          <entry key="JSON" value="21" />
-          <entry key="JavaScript" value="88" />
+          <entry key="CLASS" value="131" />
+          <entry key="CSS" value="19" />
+          <entry key="Database Element" value="3" />
+          <entry key="HTML" value="114" />
+          <entry key="Image" value="21" />
+          <entry key="JAVA" value="236" />
+          <entry key="JSON" value="25" />
+          <entry key="JavaScript" value="108" />
           <entry key="Properties" value="3" />
-          <entry key="TypeScript" value="2" />
-          <entry key="XML" value="46" />
+          <entry key="SQL" value="1" />
+          <entry key="Scratch" value="1" />
+          <entry key="TypeScript" value="3" />
+          <entry key="XML" value="47" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="50" />
-          <entry key="html" value="1403" />
-          <entry key="java" value="5514" />
-          <entry key="js" value="2947" />
-          <entry key="json" value="178" />
+          <entry key="css" value="302" />
+          <entry key="ft" value="2" />
+          <entry key="html" value="2165" />
+          <entry key="java" value="6760" />
+          <entry key="js" value="4854" />
+          <entry key="json" value="188" />
           <entry key="properties" value="22" />
-          <entry key="txt" value="58" />
+          <entry key="txt" value="62" />
           <entry key="xml" value="231" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="50" />
-          <entry key="HTML" value="1406" />
-          <entry key="JAVA" value="5514" />
-          <entry key="JSON" value="178" />
-          <entry key="JavaScript" value="2944" />
-          <entry key="PLAIN_TEXT" value="58" />
+          <entry key="CSS" value="302" />
+          <entry key="HTML" value="2170" />
+          <entry key="JAVA" value="6760" />
+          <entry key="JSON" value="188" />
+          <entry key="JavaScript" value="4849" />
+          <entry key="PLAIN_TEXT" value="62" />
           <entry key="Properties" value="22" />
           <entry key="SQL" value="2" />
+          <entry key="VTL" value="2" />
           <entry key="XML" value="229" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/admin/orderList.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/config/ShiroConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="842">
-              <caret line="138" column="6" selection-start-line="138" selection-start-column="6" selection-end-line="138" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/static/js/orderList.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="46" column="25" lean-forward="true" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
-              <folding>
-                <element signature="e#986#1331#0" />
-                <element signature="e#6#12#0" expanded="true" />
-                <element signature="e#12#18#0" expanded="true" />
-                <element signature="e#68#74#0" expanded="true" />
-                <element signature="e#74#80#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="44" column="51" lean-forward="true" selection-start-line="44" selection-start-column="51" selection-end-line="44" selection-end-column="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Tag Library Descriptor" />
         <option value="JUnit4 Test Class" />
-        <option value="HTML File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>goods</find>
       <find>money</find>
       <find>images/</find>
       <find>js/bodyTab.js</find>
@@ -261,6 +313,7 @@
       <find>addResourceHandlers</find>
       <find>newsName</find>
       <find>userList</find>
+      <find>loginBody</find>
     </findStrings>
     <replaceStrings>
       <replace>money</replace>
@@ -275,57 +328,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/mall-service/src/main/java/org/jleopard/mall/config/RootConfig.java" />
-        <option value="$PROJECT_DIR$/mall-web/src/main/webapp/static/css/public.css" />
-        <option value="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/config/AjaxAuthenticationEntryPoint.java" />
-        <option value="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/config/AjaxRequestMatcher.java" />
-        <option value="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/IndexController.java" />
-        <option value="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/BaseController.java" />
-        <option value="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/config/AppInitializer.java" />
-        <option value="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/403.html" />
-        <option value="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/CodeController.java" />
-        <option value="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/ValiCodeController.java" />
-        <option value="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/login.html" />
-        <option value="$PROJECT_DIR$/mall-web/src/main/webapp/static/js/login.js" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/LoginController.java" />
-        <option value="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/config/ShiroConfig.java" />
-        <option value="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/shiro/ShiroRealmImpl.java" />
-        <option value="$PROJECT_DIR$/mall-web/pom.xml" />
-        <option value="$PROJECT_DIR$/mall-dao/pom.xml" />
-        <option value="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/index.html" />
-        <option value="$PROJECT_DIR$/mall-web/src/main/resources/log4j.properties" />
-        <option value="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/news/newsAdd.html" />
-        <option value="$PROJECT_DIR$/mall-pojo/src/main/java/org/jleopard/mall/model/Product.java" />
         <option value="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/admin/productList.html" />
-        <option value="$PROJECT_DIR$/mall-web/src/main/webapp/static/js/userList.js" />
         <option value="$PROJECT_DIR$/mall-web/src/main/webapp/static/js/newsList.js" />
         <option value="$PROJECT_DIR$/mall-dao/src/main/java/org/jleopard/mall/dao/CategoryMapper.java" />
         <option value="$PROJECT_DIR$/mall-dao/src/main/resources/mapper/CategoryMapper.xml" />
-        <option value="$PROJECT_DIR$/mall-common/src/main/java/org/jleopard/ResultKeys.java" />
         <option value="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/config/AppConfig.java" />
         <option value="$PROJECT_DIR$/mall-web/src/main/webapp/static/js/newsAdd.js" />
         <option value="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/admin/productAdd.html" />
         <option value="$PROJECT_DIR$/mall-web/src/main/webapp/static/js/main.js" />
         <option value="$PROJECT_DIR$/mall-web/src/main/webapp/static/js/index.js" />
         <option value="$PROJECT_DIR$/mall-web/src/main/webapp/static/js/bodyTab.js" />
-        <option value="$PROJECT_DIR$/mall-web/src/main/webapp/static/json/navs.json" />
         <option value="$PROJECT_DIR$/mall-service/src/main/java/org/jleopard/mall/service/OrderService.java" />
         <option value="$PROJECT_DIR$/mall-service/src/main/java/org/jleopard/mall/service/impl/OrderServiceImpl.java" />
         <option value="$PROJECT_DIR$/mall-dao/src/main/java/org/jleopard/mall/dao/OrderMapper.java" />
         <option value="$PROJECT_DIR$/mall-dao/src/main/resources/mapper/OrderMapper.xml" />
-        <option value="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/ProductController.java" />
         <option value="$PROJECT_DIR$/mall-pojo/src/main/java/org/jleopard/mall/model/Order.java" />
         <option value="$PROJECT_DIR$/mall-dao/src/main/resources/mapper/ProductMapper.xml" />
         <option value="$PROJECT_DIR$/mall-pojo/src/main/java/org/jleopard/mall/model/OrderItem.java" />
         <option value="$PROJECT_DIR$/mall-dao/src/main/java/org/jleopard/mall/dao/ProductMapper.java" />
         <option value="$PROJECT_DIR$/mall-dao/src/main/resources/mapper/OrderItemMapper.xml" />
         <option value="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/main.html" />
-        <option value="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/OrderController.java" />
         <option value="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/admin/orderList.html" />
-        <option value="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/config/GlobalExceptionResolver.java" />
-        <option value="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/UserController.java" />
         <option value="$PROJECT_DIR$/mall-web/src/main/webapp/static/js/orderList.js" />
+        <option value="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/admin/_index.html" />
+        <option value="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/common/footer.html" />
+        <option value="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/common/__link_i.html" />
+        <option value="$PROJECT_DIR$/mall-web/src/main/webapp/static/json/images.json" />
+        <option value="$PROJECT_DIR$/mall-web/src/main/webapp/static/css/index_i.css" />
+        <option value="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/common/__footer.html" />
+        <option value="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/_index.html" />
+        <option value="$PROJECT_DIR$/mall-web/src/main/webapp/static/js/cache.js" />
+        <option value="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/login.html" />
+        <option value="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/mall-web/src/main/webapp/static/js/login.js" />
+        <option value="$PROJECT_DIR$/mall-web/src/main/webapp/static/json/navs.json" />
+        <option value="$PROJECT_DIR$/mall-web/src/main/webapp/static/js/userList.js" />
+        <option value="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/BaseController.java" />
+        <option value="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/admin/index.html" />
+        <option value="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/util/UploadFileHelper.java" />
+        <option value="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/ProductController.java" />
+        <option value="$PROJECT_DIR$/mall-common/src/main/java/org/jleopard/ResultKeys.java" />
+        <option value="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/OrderController.java" />
+        <option value="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/mall-web/src/main/webapp/static/js/index_i.js" />
+        <option value="$PROJECT_DIR$/mall-pojo/src/main/java/org/jleopard/mall/model/CartItem.java" />
+        <option value="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/IndexController.java" />
+        <option value="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/user/cart.html" />
+        <option value="$PROJECT_DIR$/mall-web/src/main/webapp/static/js/cart.js" />
+        <option value="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/ShopCartController.java" />
+        <option value="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/common/__header.html" />
+        <option value="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/config/GlobalExceptionResolver.java" />
+        <option value="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/403.html" />
       </list>
     </option>
   </component>
@@ -376,9 +429,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="318" />
-    <option name="y" value="83" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="345" />
+    <option name="y" value="291" />
     <option name="width" value="1412" />
     <option name="height" value="948" />
   </component>
@@ -388,7 +441,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -400,58 +452,6 @@
             <path>
               <item name="mallmanager" type="b2602c69:ProjectViewProjectNode" />
               <item name="mallmanager" type="462c0819:PsiDirectoryNode" />
-              <item name="mall-dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mallmanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mallmanager" type="462c0819:PsiDirectoryNode" />
-              <item name="mall-dao" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mallmanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mallmanager" type="462c0819:PsiDirectoryNode" />
-              <item name="mall-dao" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mallmanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mallmanager" type="462c0819:PsiDirectoryNode" />
-              <item name="mall-dao" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mallmanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mallmanager" type="462c0819:PsiDirectoryNode" />
-              <item name="mall-dao" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mall" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mallmanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mallmanager" type="462c0819:PsiDirectoryNode" />
-              <item name="mall-dao" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mallmanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mallmanager" type="462c0819:PsiDirectoryNode" />
-              <item name="mall-dao" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mallmanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mallmanager" type="462c0819:PsiDirectoryNode" />
               <item name="mall-web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -490,16 +490,6 @@
               <item name="mall-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mall" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mallmanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mallmanager" type="462c0819:PsiDirectoryNode" />
-              <item name="mall-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -509,7 +499,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mallmanager" type="b2602c69:ProjectViewProjectNode" />
@@ -518,8 +508,8 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mallmanager" type="b2602c69:ProjectViewProjectNode" />
@@ -529,8 +519,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mallmanager" type="b2602c69:ProjectViewProjectNode" />
@@ -541,21 +529,34 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mallmanager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mallmanager" type="462c0819:PsiDirectoryNode" />
+              <item name="mall-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1532938205973" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533108630507" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="database.console.LAST_STATE" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/ClientManageSystem" />
     <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -567,7 +568,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -590,10 +591,10 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/mall-web/src/main/webapp/static/js" />
+      <recent name="$PROJECT_DIR$/mall-web/src/main/webapp/static/images" />
+      <recent name="$PROJECT_DIR$/mall-web/src/main/webapp/static/css" />
+      <recent name="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/common" />
       <recent name="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/admin" />
-      <recent name="$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates" />
-      <recent name="$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/config" />
-      <recent name="$PROJECT_DIR$/mall-web/src/main/webapp/static" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="test" />
@@ -3428,6 +3429,13 @@
       <workItem from="1532868489106" duration="3840000" />
       <workItem from="1532910661621" duration="12521000" />
       <workItem from="1532924346622" duration="14408000" />
+      <workItem from="1532953802920" duration="2504000" />
+      <workItem from="1533029561897" duration="2435000" />
+      <workItem from="1533034178627" duration="2735000" />
+      <workItem from="1533045574386" duration="6942000" />
+      <workItem from="1533079403946" duration="16662000" />
+      <workItem from="1533096397932" duration="604000" />
+      <workItem from="1533097794390" duration="11272000" />
     </task>
     <servers />
   </component>
@@ -3464,7 +3472,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="186747000" />
+    <option name="totallyTimeSpent" value="229901000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -3476,9 +3484,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="318" y="83" width="1412" height="948" extended-state="0" />
+    <frame x="57" y="26" width="1863" height="1054" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49830508" visible="true" weight="0.3133236" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49830508" visible="true" weight="0.25591636" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -3488,26 +3496,27 @@
       <window_info id="Web" order="7" sideWeight="0.5016949" side_tool="true" weight="0.2994186" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3275862" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" weight="0.35036495" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" weight="0.35021552" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39870688" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32972974" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50192624" side_tool="true" weight="0.30430108" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="9" sideWeight="0.49865952" weight="0.3258294" />
+      <window_info anchor="bottom" id="Database Changes" order="8" weight="0.3296837" />
+      <window_info anchor="bottom" id="Messages" order="9" sideWeight="0.49865952" weight="0.32543105" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" weight="0.32972974" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32900944" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49807376" weight="0.30387932" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32846716" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.49807376" visible="true" weight="0.30280173" />
       <window_info anchor="bottom" id="Application Servers" order="13" weight="0.32972974" />
       <window_info active="true" anchor="bottom" id="REST Client" order="14" weight="0.39150944" />
       <window_info anchor="bottom" id="Spring" order="15" weight="0.3286638" />
+      <window_info anchor="bottom" id="Database Console" order="16" weight="0.3296837" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven Projects" order="4" weight="0.3280132" />
-      <window_info anchor="right" id="Database" order="5" weight="0.3296643" />
+      <window_info anchor="right" id="Maven Projects" order="4" weight="0.32746285" />
+      <window_info anchor="right" id="Database" order="5" weight="0.329429" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="SciView" order="7" weight="0.3296643" />
       <window_info anchor="right" id="Capture Analysis" order="8" />
@@ -3557,402 +3566,359 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/config/AppConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="43" column="14" lean-forward="true" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/static/json/images.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/static/json/linkList.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="10" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/common/__link_i.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="57" lean-forward="true" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/static/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="5" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/static/css/index_i.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="52" column="19" lean-forward="true" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/common/__footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="72" selection-start-line="1" selection-start-column="59" selection-end-line="1" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/static/js/cache.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="317" column="19" lean-forward="true" selection-start-line="317" selection-start-column="19" selection-end-line="317" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/static/images/login_bg.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/static/css/public.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="93" column="21" selection-start-line="93" selection-start-column="12" selection-end-line="93" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="32" column="54" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/admin/_index.html" />
+    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/admin/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="56" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/admin/userInfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-510" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/user/changePwd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/static/js/login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="88" selection-start-line="17" selection-start-column="88" selection-end-line="17" selection-end-column="88" />
+        <state relative-caret-position="221">
+          <caret line="13" column="42" lean-forward="true" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/static/js/userList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="62" column="35" lean-forward="true" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/admin/userList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="34" column="52" lean-forward="true" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-common/src/main/java/org/jleopard/AttributeKeys.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="33" lean-forward="true" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/authz/annotation/RequiresAuthentication.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="47" lean-forward="true" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/VerCodeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="32" column="25" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="25" />
+        <state relative-caret-position="192">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/authz/annotation/RequiresRoles.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/util/UploadFileHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/login.html">
+    <entry file="file://$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/BaseController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="59" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-web/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="113" column="21" selection-start-line="113" selection-start-column="21" selection-end-line="113" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-dao/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="87" column="20" lean-forward="true" selection-start-line="87" selection-start-column="20" selection-end-line="87" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="51" column="80" selection-start-line="51" selection-start-column="68" selection-end-line="51" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-web/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/static/json/newsImg.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="46" lean-forward="true" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-dao/src/main/java/org/jleopard/mall/dao/CategoryMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-dao/src/main/resources/mapper/CategoryMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/static/json/images.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.7.RELEASE/spring-webmvc-5.0.7.RELEASE.jar!/org/springframework/web/servlet/config/annotation/ResourceHandlerRegistry.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="44" column="45" selection-start-line="44" selection-start-column="45" selection-end-line="44" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-common/src/main/java/org/jleopard/util/PathUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="41" lean-forward="true" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-pojo/src/main/java/org/jleopard/mall/model/ProductKey.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="32" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/static/js/userAdd.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="38" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/admin/productAdd.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="51" column="104" selection-start-line="51" selection-start-column="104" selection-end-line="51" selection-end-column="104" />
+        <state relative-caret-position="602">
+          <caret line="88" column="11" selection-start-line="88" selection-start-column="11" selection-end-line="88" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mall-common/src/main/java/org/jleopard/ResultKeys.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="31" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="31" />
+        <state relative-caret-position="323">
+          <caret line="19" column="16" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/static/js/bodyTab.js">
+    <entry file="file://$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1734">
-          <caret line="117" column="10" lean-forward="true" selection-start-line="117" selection-start-column="10" selection-end-line="117" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/static/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="22" column="23" lean-forward="true" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/static/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="11" column="50" lean-forward="true" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/static/js/newsAdd.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="85" column="43" lean-forward="true" selection-start-line="85" selection-start-column="43" selection-end-line="85" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="60" column="80" selection-start-line="60" selection-start-column="57" selection-end-line="60" selection-end-column="80" />
+        <state relative-caret-position="782">
+          <caret line="67" column="33" lean-forward="true" selection-start-line="67" selection-start-column="33" selection-end-line="67" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/static/json/navs.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="88" column="38" lean-forward="true" selection-start-line="88" selection-start-column="38" selection-end-line="88" selection-end-column="38" />
+        <state relative-caret-position="-469">
+          <caret line="46" column="34" lean-forward="true" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mall-service/src/main/java/org/jleopard/mall/service/OrderService.java">
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="28" column="25" lean-forward="true" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+        <state relative-caret-position="192">
+          <caret line="15747" column="12" selection-start-line="15747" selection-start-column="12" selection-end-line="15747" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mall-service/src/main/java/org/jleopard/mall/service/impl/OrderServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/mall-pojo/src/main/java/org/jleopard/mall/model/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="73" column="36" selection-start-line="73" selection-start-column="27" selection-end-line="73" selection-end-column="36" />
+        <state relative-caret-position="221">
+          <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/static/js/register.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="54" lean-forward="true" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/admin/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-566">
+          <caret line="63" column="82" selection-start-line="63" selection-start-column="58" selection-end-line="63" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-pojo/src/main/java/org/jleopard/mall/model/Cart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/admin/orderList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="13" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/static/js/bodyTab.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5887">
+          <caret line="3" column="32" lean-forward="true" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/static/js/cart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="16" column="127" selection-start-line="16" selection-start-column="127" selection-end-line="16" selection-end-column="127" />
           <folding>
-            <element signature="e#2150#2151#0" expanded="true" />
-            <element signature="e#2177#2178#0" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mall-pojo/src/main/java/org/jleopard/mall/model/OrderKey.java">
+    <entry file="file://$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/OrderController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+        <state relative-caret-position="85">
+          <caret line="125" column="32" selection-start-line="125" selection-start-column="27" selection-end-line="125" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mall-pojo/src/main/java/org/jleopard/mall/model/Address.java">
+    <entry file="file://$PROJECT_DIR$/mall-pojo/src/main/java/org/jleopard/mall/model/CartItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="24" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-pojo/src/main/java/org/jleopard/mall/model/OrderItemKey.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-dao/src/main/resources/mapper/ProductMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="29" column="24" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="24" />
+        <state relative-caret-position="170">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
           <folding>
-            <element signature="n#select#2;n#mapper#0;n#!!top" />
-            <element signature="n#delete#0;n#mapper#0;n#!!top" />
-            <element signature="n#insert#0;n#mapper#0;n#!!top" />
-            <element signature="n#update#0;n#mapper#0;n#!!top" />
+            <element signature="e#293#294#0" expanded="true" />
+            <element signature="e#320#321#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mall-pojo/src/main/java/org/jleopard/mall/model/Product.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        <state>
+          <caret column="32" lean-forward="true" selection-start-column="32" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+    <entry file="file://$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/ShopCartController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="9353" column="13" selection-start-line="9353" selection-start-column="13" selection-end-line="9353" selection-end-column="13" />
+        <state relative-caret-position="-163">
+          <caret line="28" column="23" lean-forward="true" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mall-pojo/src/main/java/org/jleopard/mall/model/OrderItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="50" column="31" lean-forward="true" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
-          <folding>
-            <element signature="e#918#919#0" expanded="true" />
-            <element signature="e#948#949#0" expanded="true" />
-            <element signature="e#1001#1002#0" expanded="true" />
-            <element signature="e#1039#1040#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-dao/src/main/java/org/jleopard/mall/dao/OrderMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="25" column="25" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-dao/src/main/java/org/jleopard/mall/dao/ProductMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="86" column="17" lean-forward="true" selection-start-line="86" selection-start-column="17" selection-end-line="86" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/admin/productList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="30" column="47" lean-forward="true" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-dao/src/main/resources/mapper/OrderMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13">
-          <caret line="2" column="42" lean-forward="true" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-dao/src/main/resources/mapper/OrderItemMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="78" lean-forward="true" selection-start-line="9" selection-start-column="78" selection-end-line="9" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/static/js/newsList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="24" column="96" selection-start-line="24" selection-start-column="96" selection-end-line="24" selection-end-column="96" />
-          <folding>
-            <element signature="e#998#1261#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/ProductController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="110" column="30" lean-forward="true" selection-start-line="110" selection-start-column="30" selection-end-line="110" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-pojo/src/main/java/org/jleopard/mall/model/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="17" column="23" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/static/js/userList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="88" column="19" selection-start-line="88" selection-start-column="8" selection-end-line="88" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/config/GlobalExceptionResolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/shiro/ShiroRealmImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="75" column="77" lean-forward="true" selection-start-line="75" selection-start-column="77" selection-end-line="75" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/admin/orderList.html">
+    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/user/cart.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/config/AppConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="39" column="6" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
+          <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/IndexController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="48" column="27" lean-forward="true" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="27" />
+        <state relative-caret-position="372">
+          <caret line="53" column="31" lean-forward="true" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/config/ShiroConfig.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar!/javax/servlet/http/HttpServletResponse.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="842">
-          <caret line="138" column="6" selection-start-line="138" selection-start-column="6" selection-end-line="138" selection-end-column="6" />
+        <state relative-caret-position="192">
+          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/OrderController.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/ShiroException.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="78" column="1" lean-forward="true" selection-start-line="78" selection-start-column="1" selection-end-line="78" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="44" column="51" lean-forward="true" selection-start-line="44" selection-start-column="51" selection-end-line="44" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-969">
+          <caret line="52" column="51" lean-forward="true" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/static/js/orderList.js">
+    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/403.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="46" column="25" lean-forward="true" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
-          <folding>
-            <element signature="e#986#1331#0" />
-            <element signature="e#6#12#0" expanded="true" />
-            <element signature="e#12#18#0" expanded="true" />
-            <element signature="e#68#74#0" expanded="true" />
-            <element signature="e#74#80#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="391">
+          <caret line="23" column="10" lean-forward="true" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/config/GlobalExceptionResolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="36" column="59" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/ProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="93" column="65" lean-forward="true" selection-start-line="93" selection-start-column="65" selection-end-line="93" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/WEB-INF/templates/common/__header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="11" selection-start-line="9" selection-start-column="3" selection-end-line="22" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="182" column="55" selection-start-line="182" selection-start-column="55" selection-end-line="182" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/static/js/index_i.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="61" column="50" selection-start-line="61" selection-start-column="50" selection-end-line="61" selection-end-column="50" />
         </state>
       </provider>
     </entry>

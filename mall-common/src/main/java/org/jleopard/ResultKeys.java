@@ -14,4 +14,8 @@ public interface ResultKeys {
     String PRODUCT = "product";
 
     String CATEGORY = "category";
+
+    String USER_INFO = "user";
+
+    String ORDER = "order";
 }

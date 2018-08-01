@@ -1,0 +1,37 @@
+<!--
+  Created By Chen_9g
+  Copyright: Copyright (c) 2018. Chen_9g 陈刚 (80588183@qq.com).
+  Find a way for success and not make excuses for failure.
+-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+    <meta charset="UTF-8">
+    <div th:replace="~{common/__link_i :: #j_link}"></div>
+</head>
+<body>
+<div th:replace="~{common/__header :: #j_header}"></div>
+
+<div class="layui-container" style="margin-top: 10px">
+    <table class="layui-table" id="cart_list">
+        <thead>
+        <tr>
+            <th>名称</th>
+            <th>单价</th>
+            <th>图片</th>
+            <th>数量</th>
+            <th>小计</th>
+            <th>操作</th>
+        </tr>
+        <tbody></tbody>
+        </thead>
+
+    </table>
+    </div>
+
+</div>
+<div th:replace="~{common/__footer :: #j_footer}"></div>
+<script type="text/javascript" src="/static/js/cart.js"></script>
+</body>
+</html>

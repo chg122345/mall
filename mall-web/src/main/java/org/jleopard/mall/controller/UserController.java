@@ -3,6 +3,7 @@ package org.jleopard.mall.controller;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import lombok.extern.log4j.Log4j;
+import org.apache.shiro.authz.annotation.Logical;
 import org.apache.shiro.authz.annotation.RequiresAuthentication;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.apache.shiro.authz.annotation.RequiresRoles;
@@ -18,6 +19,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Arrays;
 import java.util.List;
 
+import static org.jleopard.ResultKeys.USER_INFO;
+
 /**
  * @Copyright (c) 2018, Chen_9g 陈刚 (80588183@qq.com).
  * @DateTime 2018-07-25  上午11:28
@@ -30,14 +33,19 @@ import java.util.List;
 @RestController
 @RequestMapping("/user")
 @Log4j
+@RequiresAuthentication
 public class UserController extends BaseController {
 
     @Autowired
     UserService userService;
 
+    /**
+     * 管理员查看用户列表
+     * @param page
+     * @param pageSize
+     * @return
+     */
     @RequiresRoles(value = {"admin"})
-    @RequiresAuthentication
-    @RequiresPermissions(value = "admin:select")
     @GetMapping("/getUserList")
     public PageTable userList(@RequestParam(value = "page", defaultValue = "1") Integer page,
                               @RequestParam(value = "limit", defaultValue = "20") Integer pageSize){
@@ -53,6 +61,7 @@ public class UserController extends BaseController {
      * @param user
      * @return
      */
+    @RequiresRoles(value = {"admin"})
     @PostMapping("/user")
     public Msg userAdd(User user){
         log.info("用户信息-->" + user);
@@ -77,6 +86,12 @@ public class UserController extends BaseController {
         return Msg.fail();
     }
 
+    /**
+     * 管理员修改用户
+     * @param user
+     * @return
+     */
+    @RequiresRoles(value = {"admin"})
     @PutMapping("/user")
     public Msg userUpdate(@RequestBody User user){
         log.info("用户信息-->" + user);
@@ -93,6 +108,12 @@ public class UserController extends BaseController {
         return Msg.fail();
     }
 
+    /**
+     * 管理员删除用户
+     * @param ids
+     * @return
+     */
+    @RequiresRoles(value = {"admin"})
     @DeleteMapping("/user")
     public Msg userDelete(@RequestBody String ids){
         log.info("id信息-->" + ids);
@@ -107,5 +128,43 @@ public class UserController extends BaseController {
         }
 
         return Msg.success();
+    }
+
+    /**
+     * 根据id获取用户信息 必须登录账号
+     * @param id
+     * @return
+     */
+    @RequiresRoles(value = {"user","admin"}, logical = Logical.OR)
+    @GetMapping("/user/{id}")
+    public Msg getUser(@PathVariable("id") String id){
+
+        User user = userService.selectById(id);
+        if (user != null){
+            return Msg.success().put(USER_INFO,user);
+        }
+        return Msg.fail();
+    }
+
+    /**
+     * 当前登录的用户修改信息
+     * @param id
+     * @return
+     */
+    @RequiresRoles(value = {"user","admin"}, logical = Logical.OR)
+    @PutMapping("/user/{id}")
+    public Msg updateUser(@PathVariable("id") String id,User user){
+        User u = getLoginUser();
+        if (u != null){
+            if (!id.equals(u.getId())){
+                return Msg.msg("只能修改自己的信息哦..");
+            }
+            user.setId(id);
+            user = userService.updateById(user);
+            if (user != null){
+                return Msg.success().put(USER_INFO,user);
+            }
+        }
+        return Msg.fail();
     }
 }

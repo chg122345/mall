@@ -11,6 +11,7 @@ public class CartItem implements Serializable {
 	private Product product;
 	private Integer number;
 	private Double money;
+
 	public CartItem(Product product) {
 		this.product=product;
 	}

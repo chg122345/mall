@@ -1,5 +1,6 @@
 package org.jleopard.mall.controller;
 
+import org.apache.shiro.authz.annotation.RequiresAuthentication;
 import org.jleopard.Msg;
 import org.jleopard.mall.model.Cart;
 import org.jleopard.mall.model.Product;
@@ -25,6 +26,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/cart")
+@RequiresAuthentication
 public class ShopCartController extends BaseController{
 
     @Autowired
@@ -32,7 +34,7 @@ public class ShopCartController extends BaseController{
 
     //处理新增购物项
     @RequestMapping("/add")
-    public Msg addCart(HttpSession session, @RequestParam("id") String id, @RequestParam("number") Integer number) {
+    public Msg addCart(HttpSession session, @RequestParam("id") String id, @RequestParam(value = "number",defaultValue = "1") Integer number) {
         ProductKey pk = new ProductKey();
         pk.setId(id);
         List<Product> products = productService.selectByIds(pk);

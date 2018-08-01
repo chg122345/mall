@@ -1,5 +1,7 @@
 package org.jleopard.mall.controller;
 
+import org.apache.shiro.SecurityUtils;
+import org.jleopard.mall.model.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.RequestContextHolder;
@@ -8,6 +10,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+
+import static org.jleopard.AttributeKeys.USER_SESSION;
 
 /**
  * @Copyright (c) 2018, Chen_9g 陈刚 (80588183@qq.com).
@@ -81,4 +85,12 @@ public class BaseController {
         return request.getSession();
     }
 
+    /**
+     * 获取当前登录的用户信息
+     * @return
+     */
+    protected User getLoginUser(){
+        User user = (User) SecurityUtils.getSubject().getSession().getAttribute(USER_SESSION);
+        return user != null ? user : null;
+    }
 }
