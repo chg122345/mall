@@ -1,0 +1,43 @@
+{
+	"title": "图片管理",
+	"id": "Images",
+	"start": 0,
+	"data": [
+		{
+			"src": "/static/images/userface1.jpg",
+			"thumb": "images/userface1.jpg",
+			"alt": "美女生活照1",
+			"pid":"1"
+		},
+		{
+			"src": "/static/images/userface2.jpg",
+			"thumb": "images/userface2.jpg",
+			"alt": "美女生活照2",
+			"pid":"2"
+		},
+		{
+			"src": "/static/images/userface3.jpg",
+			"thumb": "images/userface3.jpg",
+			"alt": "美女生活照3",
+			"pid":"3"
+		},
+		{
+			"src": "/static/images/userface4.jpg",
+			"thumb": "images/userface4.jpg",
+			"alt": "美女生活照4",
+			"pid":"4"
+		},
+		{
+			"src": "/static/images/userface5.jpg",
+			"thumb": "images/userface5.jpg",
+			"alt": "美女生活照5",
+			"pid":"5"
+		},
+		{
+			"src": "/static/images/userface1.jpg",
+			"thumb": "images/userface1.jpg",
+			"alt": "美女生活照6",
+			"pid":"6"
+		}
+	]
+}

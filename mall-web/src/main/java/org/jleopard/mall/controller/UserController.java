@@ -15,6 +15,7 @@ import org.jleopard.mall.util.MD5Helper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Arrays;
 import java.util.List;
@@ -38,6 +39,11 @@ public class UserController extends BaseController {
 
     @Autowired
     UserService userService;
+
+    @GetMapping("/{page}")
+    public ModelAndView userSkippage(@PathVariable("page") String page) {
+        return  getModelAndView("user/" + page);
+    }
 
     /**
      * 管理员查看用户列表

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.jleopard.mall.dao.ProductMapper" >
+  <resultMap id="BaseResultMap" type="org.jleopard.mall.model.Product" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <id column="ml_category_id" property="mlCategoryId" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="details" property="details" jdbcType="VARCHAR" />
+    <result column="price" property="price" jdbcType="DOUBLE" />
+    <result column="stock" property="stock" jdbcType="INTEGER" />
+    <result column="imgs" property="imgs" jdbcType="VARCHAR" />
+    <result column="created" property="created" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, ml_category_id, name, details, price, stock, imgs, created
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="org.jleopard.mall.model.ProductKey" >
+    select 
+    <include refid="Base_Column_List" />
+    from ml_product
+    <trim prefix="where" suffixOverrides="and">
+    <if test="id != null">
+      id = #{id,jdbcType=VARCHAR} and
+    </if>
+      <if test="mlCategoryId != null and mlCategoryId != 0">
+        ml_category_id = #{mlCategoryId,jdbcType=INTEGER}
+      </if>
+    </trim>
+  </select>
+  <select id="selectById" resultMap="BaseResultMap" parameterType="java.lang.String">
+    select
+    <include refid="Base_Column_List" />
+    from ml_product
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectBySelective" resultMap="BaseResultMap" parameterType="org.jleopard.mall.model.Product">
+    select
+    <include refid="Base_Column_List" />
+    from ml_product
+  <trim prefix="where" suffixOverrides="and">
+    <if test="id != null">
+      id = #{id,jdbcType=VARCHAR} and
+    </if>
+    <if test="name != null" >
+      name = #{name,jdbcType=VARCHAR} and
+    </if>
+    <if test="details != null" >
+      details = #{details,jdbcType=VARCHAR} and
+    </if>
+    <if test="price != null" >
+      price = #{price,jdbcType=DOUBLE} and
+    </if>
+    <if test="stock != null" >
+      stock = #{stock,jdbcType=INTEGER} and
+    </if>
+    <if test="imgs != null" >
+      imgs = #{imgs,jdbcType=VARCHAR} and
+    </if>
+    <if test="created != null" >
+      created = #{created,jdbcType=TIMESTAMP}
+    </if>
+  </trim>
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select
+    <include refid="Base_Column_List" />
+    from ml_product
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="org.jleopard.mall.model.ProductKey" >
+    delete from ml_product
+    <trim prefix="where" suffixOverrides="and">
+      <if test="id != null">
+        id = #{id,jdbcType=VARCHAR} and
+      </if>
+      <if test="mlCategoryId != null and mlCategoryId != 0">
+        ml_category_id = #{mlCategoryId,jdbcType=INTEGER}
+      </if>
+    </trim>
+  </delete>
+  <insert id="insert" parameterType="org.jleopard.mall.model.Product" >
+    insert into ml_product (id, ml_category_id, name, 
+      details, price, stock, 
+      imgs, created)
+    values (#{id,jdbcType=VARCHAR}, #{mlCategoryId,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, 
+      #{details,jdbcType=VARCHAR}, #{price,jdbcType=DOUBLE}, #{stock,jdbcType=INTEGER}, 
+      #{imgs,jdbcType=VARCHAR}, #{created,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="org.jleopard.mall.model.Product" >
+    insert into ml_product
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="mlCategoryId != null" >
+        ml_category_id,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="details != null" >
+        details,
+      </if>
+      <if test="price != null" >
+        price,
+      </if>
+      <if test="stock != null" >
+        stock,
+      </if>
+      <if test="imgs != null" >
+        imgs,
+      </if>
+      <if test="created != null" >
+        created,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="mlCategoryId != null" >
+        #{mlCategoryId,jdbcType=INTEGER},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="details != null" >
+        #{details,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null" >
+        #{price,jdbcType=DOUBLE},
+      </if>
+      <if test="stock != null" >
+        #{stock,jdbcType=INTEGER},
+      </if>
+      <if test="imgs != null" >
+        #{imgs,jdbcType=VARCHAR},
+      </if>
+      <if test="created != null" >
+        #{created,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.jleopard.mall.model.Product" >
+    update ml_product
+    <set >
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="details != null" >
+        details = #{details,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null" >
+        price = #{price,jdbcType=DOUBLE},
+      </if>
+      <if test="stock != null" >
+        stock = #{stock,jdbcType=INTEGER},
+      </if>
+      <if test="imgs != null" >
+        imgs = #{imgs,jdbcType=VARCHAR},
+      </if>
+      <if test="created != null" >
+        created = #{created,jdbcType=TIMESTAMP},
+      </if>
+      <if test="mlCategoryId != null" >
+        ml_category_id = #{mlCategoryId,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.jleopard.mall.model.Product" >
+    update ml_product
+    set name = #{name,jdbcType=VARCHAR},
+      details = #{details,jdbcType=VARCHAR},
+      price = #{price,jdbcType=DOUBLE},
+      stock = #{stock,jdbcType=INTEGER},
+      imgs = #{imgs,jdbcType=VARCHAR},
+      created = #{created,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

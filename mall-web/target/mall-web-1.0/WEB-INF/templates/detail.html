@@ -1,0 +1,63 @@
+<!--
+  Created By Chen_9g
+  Copyright: Copyright (c) 2018. Chen_9g 陈刚 (80588183@qq.com).
+  Find a way for success and not make excuses for failure.
+-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+    <meta charset="UTF-8">
+    <div th:replace="~{common/__link_i :: #j_link}"></div>
+    <link type="text/css" href="/static/css/detial.css" rel="stylesheet"  media="all">
+</head>
+<body>
+<div th:replace="~{common/__header :: #j_header}"></div>
+
+<div class="layui-container">
+
+    <div class="layui-col-xs12 layui-col-sm12 layui-col-md12 product_category layui-bg-gray">
+        <a href="javascript:;"> 推荐<span class="layui-badge-dot"style="position: relative; top: -2px; left: 1px; size: 5px;"></span></a>
+        <a href="javascript:;"> 本周热销</a>
+        <a href="javascript:;"> 评价最高</a>
+    </div>
+    <hr>
+<div class="layui-row layui-col-space10">
+
+    <div class="box">
+        <div class="layui-row">
+            <div class="post-img layui-col-md8">
+                <a href="javascript:;"><img th:src="@{${product.imgs}}" alt=""></a>
+            </div>
+            <div class="post-content  layui-col-md4">
+                <h2 th:text="${product.name}"></h2>
+                <h3><a href="javascript:;"><span class="text-center">￥ [[${product.price}]] <del class="box-dprice">￥199</del></span></a></h3>
+                <p>详细参数:</p>
+                <hr>
+                <p th:text="${product.details}"></p>
+                <hr>
+                <span>
+                    <div class="layui-form-item input-item">
+                        <label for="num_input">数量：</label>
+                        <input type="number" required lay-verify="required" id="num_input" value="1" autocomplete="off" class="layui-input number">
+                    </div>
+                </span>
+                <p>库存: ([[${product.stock}]])</p><br>
+                <span th:attr="data-id=${product.id}" class="btn_edit">
+                    <a href="javascript:;" class="layui-btn layui-btn-lg layui-btn-warm right_go">立即购买</a>
+                    <a href="javascript:;" class="layui-btn layui-btn-lg layui-btn-danger add_cart">
+                    <i class="layui-icon layui-icon-cart"></i>加入购物车</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</div>
+<div th:replace="~{common/__footer :: #j_footer}"></div>
+<script>
+
+</script>
+</body>
+</html>

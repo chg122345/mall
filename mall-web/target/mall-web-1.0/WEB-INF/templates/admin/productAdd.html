@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+    <meta charset="utf-8">
+    <div th:replace="~{common/__link :: #j_link}"></div>
+</head>
+<body class="childrenBody">
+<form class="layui-form layui-row layui-col-space10">
+	<div class="layui-col-md9 layui-col-xs12">
+		<div class="layui-row layui-col-space10">
+			<div class="layui-col-md9 layui-col-xs7">
+				<div class="layui-form-item magt3">
+					<label class="layui-form-label">产品名称</label>
+					<div class="layui-input-block">
+						<input type="text" class="layui-input" lay-verify="newsName" id ="p_name" placeholder="请输入名称">
+					</div>
+				</div>
+
+                <div class="layui-form-item magt3">
+                    <label class="layui-form-label">产品单价</label>
+                    <div class="layui-input-block">
+                        <input type="text"  class="layui-input" lay-verify="required" id="p_price" placeholder="请输入产品单价">
+                    </div>
+                </div>
+                <div class="layui-form-item magt3">
+                    <label class="layui-form-label">库存数量</label>
+                    <div class="layui-input-block">
+                        <input type="number" class="layui-input" lay-verify="required" id="p_stock" placeholder="请输入库存数量">
+                    </div>
+                </div>
+			</div>
+			<div class="layui-col-md3 layui-col-xs5">
+				<div class="layui-upload-list thumbBox mag0 magt3">
+					<img class="layui-upload-img thumbImg">
+                    <input type="hidden" id="p_img">
+				</div>
+			</div>
+		</div>
+		<div class="layui-form-item magb0">
+			<label class="layui-form-label">产品参数</label>
+			<div class="layui-input-block">
+				<textarea class="layui-textarea layui-hide" name="details" lay-verify="content" id="news_content"></textarea>
+			</div>
+		</div>
+	</div>
+	<div class="layui-col-md3 layui-col-xs12">
+		<blockquote class="layui-elem-quote title"><i class="seraph icon-caidan"></i> 分类目录</blockquote>
+		<div class="border category">
+			<div class="">
+               <p th:each="category : ${category}">
+                   <input type="radio" name="mlCategoryId" th:checked="${category.id} == 1 ? true: false"
+                          th:attr="title=${category.name}" th:value="${category.id}" lay-skin="primary"/>
+               </p>
+            </div>
+		</div>
+		<blockquote class="layui-elem-quote title magt10"><i class="layui-icon">&#xe609;</i> 上架</blockquote>
+		<div class="border">
+			<div class="layui-form-item">
+				<label class="layui-form-label"><i class="layui-icon">&#xe60e;</i> 状　态</label>
+				<div class="layui-input-block newsStatus">
+					<select name="status" lay-verify="required">
+						<option value="0">立即上架</option>
+					</select>
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label"><i class="layui-icon">&#xe609;</i> 发　布</label>
+				<div class="layui-input-block">
+					<input type="radio" name="release" title="立即上架" lay-skin="primary" lay-filter="release" checked />
+					<input type="radio" name="release" title="定时上架" lay-skin="primary" lay-filter="release" disabled />
+				</div>
+			</div>
+			<div class="layui-form-item layui-hide releaseDate">
+				<label class="layui-form-label"></label>
+				<div class="layui-input-block">
+					<input type="text" class="layui-input" id="release" placeholder="请选择日期和时间" readonly />
+				</div>
+			</div>
+			<div class="layui-form-item openness">
+				<label class="layui-form-label"><i class="seraph icon-look"></i> 公开度</label>
+				<div class="layui-input-block">
+					<input type="radio" name="openness" title="开放浏览" lay-skin="primary" checked />
+					<input type="radio" name="openness" title="私密浏览" lay-skin="primary" disabled />
+				</div>
+			</div>
+			<div class="layui-form-item newsTop">
+				<label class="layui-form-label"><i class="seraph icon-zhiding"></i>推  荐</label>
+				<div class="layui-input-block">
+					<input type="checkbox" name="newsTop" lay-skin="switch" lay-text="是|否">
+				</div>
+			</div>
+			<hr class="layui-bg-gray" />
+			<div class="layui-right">
+				<a class="layui-btn layui-btn-sm" lay-filter="addNews" lay-submit><i class="layui-icon">&#xe609;</i>发布产品</a>
+			</div>
+		</div>
+	</div>
+</form>
+<script type="text/javascript" src="/static/layui/layui.js"></script>
+<script type="text/javascript" src="/static/js/newsAdd.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+/* box 文章盒整体风格 */
+
+.box {
+	background-color: #fff;
+	border-radius: 2px;
+	box-shadow: 0 10px 60px 0 rgba(29, 29, 31, 0.09);
+	transition: all .12s ease-out;
+}
+
+.box:hover {
+	box-shadow: 0 0 36px #d8dde5;
+	opacity: 1;
+}
+
+
+/* 博客展示盒 */
+
+.box .post-img img {
+	display: inline-block;
+	max-width: 100%;
+	height: auto;
+}
+
+.box .post-content {
+	padding: 50px;
+	background: #fff;
+}
+
+.box .post-content h2 {
+	font-weight: bold;
+	color: #999999;
+	margin-bottom: 30px;
+}
+
+.box .post-content h3 {
+	margin-bottom: 30px;
+}
+
+.box .post-content h3 a {
+	color: #252629;
+}
+
+.box .post-content h3 a:hover {
+	color: #1E9FFF;
+}
+
+.box .post-content .add_cart{
+	float: right;
+	padding-right: 10px;
+}
+.box .post-content .btn_edit {
+	margin-top: 5px;
+}
+
+.box .post-content span:hover {
+	color: #1E9FFF;
+}
+
+.box .post-content .number {
+	width: 50px;
+}
