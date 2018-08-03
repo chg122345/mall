@@ -1,6 +1,7 @@
 package org.jleopard.mall.dao;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.jleopard.mall.model.Order;
 import org.jleopard.mall.model.OrderKey;
 
@@ -24,4 +25,6 @@ public interface OrderMapper {
     int updateByPrimaryKey(Order record);
 
     List<Order> selectAll();
+
+    int updateStatusBySerial(@Param("serial") String serial, @Param("status") Byte s);
 }

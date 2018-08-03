@@ -179,4 +179,9 @@
       and ml_user_id = #{mlUserId,jdbcType=VARCHAR}
       and ml_address_id = #{mlAddressId,jdbcType=INTEGER}
   </update>
+  <update id="updateStatusBySerial">
+    update ml_order
+    set status = #{status,jdbcType=TINYINT}
+    where serial = #{serial,jdbcType=VARCHAR}
+  </update>
 </mapper>

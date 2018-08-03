@@ -27,4 +27,6 @@ public interface OrderService {
     Order updateByIdSelective(Order order);
 
     List<Order> select();
+
+    int updateStatusBySerial(String serial, Byte s);
 }

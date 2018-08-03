@@ -1,14 +1,15 @@
-layui.use(['form','layer','table','laytpl'],function(){
+layui.define(['form','layer','table','laytpl','jl'],function(exports){
     var form = layui.form,
         layer = parent.layer === undefined ? layui.layer : top.layer,
         $ = layui.jquery,
         laytpl = layui.laytpl,
-        table = layui.table;
+        table = layui.table
+        jl = layui.jl;
 
     //订单列表
     var tableIns = table.render({
         elem: '#userList',
-        url : '/a/order',
+        url : '/user/getOrder',
         cellMinWidth : 95,
         page : true,
         height : "full-400",
@@ -17,11 +18,10 @@ layui.use(['form','layer','table','laytpl'],function(){
         id : "userListTable",
         cols : [[
             {type: "checkbox", fixed:"left", width:50},
-            {field: 'id', title: 'ID', minWidth:200, align:"center"},
             {field: 'serial', title: '订单编号', minWidth:100, align:"center"},
             {field: 'number', title: '订购数量', minWidth:50, align:'center'},
-            {field: 'money', title: '订单金额', minWidth:50, align:'center', edit:'number'},
-            {field: 'status', title: '订单状态', minWidth:50, align:'center',edit: 'text',templet:function(d){
+            {field: 'money', title: '订单金额', minWidth:50, align:'center'},
+            {field: 'status', title: '订单状态', minWidth:50, align:'center',templet:function(d){
                 var s = d.status;
                 if (s == 1){
                     return "待付款";
@@ -47,7 +47,18 @@ layui.use(['form','layer','table','laytpl'],function(){
               return res;
             }},
             {field: 'created', title: '下单时间', align:'center',minWidth:150,sort:true},
-            {title: '操作', minWidth:175, templet:'#userListBar',fixed:"right",align:"center"}
+            {field: 'status', title: '操作', minWidth:175,fixed:"right",align:"center", templet:function (d) {
+                    var s = d.status;
+                    if (s == 1){
+                        return "<a href='/user/pay/"+ d.id +"' class='layui-btn layui-btn-xs' lay-event='pay'>去付款</a><a class='layui-btn layui-btn-xs layui-btn-danger' lay-event='del'>删除</a>";
+                    } else if (s == 2){
+                        return "付款成功，等待店家发货";
+                    } else if (s == 3){
+                        return "<a class='layui-btn layui-btn-xs' lay-event='sure'>确认收货</a>";
+                    } else if (s == 4){
+                        return "<a class='layui-btn layui-btn-xs layui-btn-danger' lay-event='del'>删除</a>";
+                    }
+                }}
         ]]
     });
 
@@ -98,62 +109,26 @@ layui.use(['form','layer','table','laytpl'],function(){
         }
     });
 
-   function updateOrder(data){
-       $.ajax({
-           url :'/a/order',
-           data :JSON.stringify({
-               id : data.id,
-               number : data.number,
-               money : data.money,
-               status : data.status }),
-           type : 'PUT',
-           dataType: 'json',
-           contentType: 'application/json;charset=UTF-8',
-           success:function (res) {
-           if (res.code === 200){
-               setTimeout(function(){
-                   layer.msg("更新成功！");
-                   window.location.reload();
-               },2000);
-           } else {
-               setTimeout(function(){
-                   layer.msg(res.msg);
-               },2000);
-           }
-          }
-       });
-       return false;
-   }
 
     //列表操作
     table.on('tool(userList)', function(obj){
         var layEvent = obj.event,
             data = obj.data;
-
-        if(layEvent === 'edit'){ //更新
-            updateOrder(data);
-        }/*else if(layEvent === 'usable'){ //启用禁用
-            var _this = $(this),
-                usableText = "是否确定禁用此用户？",
-                btnText = "已禁用";
-            if(_this.text()=="已禁用"){
-                usableText = "是否确定启用此用户？",
-                btnText = "已启用";
-            }
-            layer.confirm(usableText,{
-                icon: 3,
-                title:'系统提示',
-                cancel : function(index){
-                    layer.close(index);
-                }
-            },function(index){
-                _this.text(btnText);
+        /*if(layEvent === 'pay'){ //付款
+            pay(data);
+        }else */if(layEvent === 'sure'){ //收货
+            layer.confirm('确认您已经收到了货？',{icon:3, title:'提示信息'},function(index){
+                jl.req('/user/sureOrder',{id:data.id},function (res) {
+                    layer.msg(res.msg);
+                    if (res.code === 200 ){
+                        tableIns.reload();
+                    }
+                });
                 layer.close(index);
-            },function(index){
-                layer.close(index);
+                return false;
             });
-        }*/else if(layEvent === 'del'){ //删除
-            layer.confirm('确定删除'+ data.id +'用户？',{icon:3, title:'提示信息'},function(index){
+        }else if(layEvent === 'del'){ //删除
+            layer.confirm('确定删除'+ data.serial +'订单？',{icon:3, title:'提示信息'},function(index){
                 $.ajax({
                     url : "/a/order",
                     data: data.id,
@@ -173,4 +148,15 @@ layui.use(['form','layer','table','laytpl'],function(){
         }
     });
 
+   /* function pay(data){
+        jl.req('/user/pay',{
+            id : data.id,
+            number : data.number,
+            money : data.money,
+            status : data.status
+        },function (res) {
+            layer.msg(res.msg);
+        })
+    }*/
+    exports('order',null);
 });

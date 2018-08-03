@@ -1,14 +1,21 @@
 /**
  *
  */
-layui.define(['jl','jquery','address'],function(exports){
+layui.define(['jl','jquery'],function(exports){
 		var jl = layui.jl,
-            address = layui.address,
 		    $ = layui.$;
-
-    address.provinces();
-
 	$(document).ready(function(){
+        jl.req('/user/getAddress','',function (res) {
+            $.each(res.data.address, function (index, item) {
+                var name = item.name;
+                var phone = item.phone;
+                var place = item.place;
+                var res = "收货人: " + name + ", 电话: " + phone + ", 地址: " + place;
+                var op = $("<option></option>").val(item.id).text(res);
+                $("#place").append(op);
+            });
+        },{type : 'GET'});
+
        jl.req('/cart/get','',function (res) {
            $.each(res.data.cart.items, function (index, item) {
                var nameTd  = $("<td></td>").append(item.product.name);
@@ -49,28 +56,23 @@ layui.define(['jl','jquery','address'],function(exports){
                .append(tdorder)
                .appendTo("#cart_list tbody");
        },{type:'GET'});
-
     });
 
     toOrder();
 
     function toOrder(){
         $(document).on('click','#to_order',function () {
-            var province = $('#province option:selected').text();//选中的值
-            var city = $('#city option:selected').text();
-            var area = $('#area option:selected').text();
-            var dital = $('#dital').val();
-            if ($('#area option:selected').val() == "" || $('#area option:selected').val() == null){
+           var placeId = $('#place option:selected').val();
+            if (placeId == "" || placeId== null){
                 layer.msg("请先选择收货地址");
                 return false;
             }
-            console.log("地区-->" +province + city + area + dital);
-            jl.req('/user/order','',function (res) {
+            jl.req('/user/order',{mlAddressId : placeId},function (res) {
                 layer.msg(res.msg);
                 if (res.code === 200){
                     window.location.href = "/user/order"
                 }
-            },{type: 'GET'});
+            },{type: 'POST'});
             return false;
         })
     }

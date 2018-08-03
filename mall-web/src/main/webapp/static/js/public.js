@@ -416,7 +416,10 @@ layui.config({
             postcode: data.field.postcode,
             place: place
         }, function (res) {
-            layer.msg(res.msg,{shift: 6})
+            layer.msg(res.msg);
+            if (res.code === 200) {
+                window.parent.location.reload();
+            }
         });
         return false;
     });

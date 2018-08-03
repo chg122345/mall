@@ -73,4 +73,9 @@ public class OrderServiceImpl implements OrderService {
     public List<Order> select() {
         return orderMapper.selectAll();
     }
+
+    @Override
+    public int updateStatusBySerial(String serial, Byte s) {
+        return orderMapper.updateStatusBySerial(serial,s);
+    }
 }

@@ -18,4 +18,6 @@ public interface ResultKeys {
     String USER_INFO = "user";
 
     String ORDER = "order";
+
+    String ADDRESS = "address";
 }

@@ -8,19 +8,18 @@ import org.apache.shiro.authz.annotation.RequiresAuthentication;
 import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.jleopard.Msg;
 import org.jleopard.PageTable;
-import org.jleopard.mall.model.Order;
-import org.jleopard.mall.model.OrderItem;
-import org.jleopard.mall.model.OrderKey;
-import org.jleopard.mall.model.User;
+import org.jleopard.mall.model.*;
 import org.jleopard.mall.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 import static org.jleopard.ResultKeys.ORDER;
 
@@ -80,7 +79,7 @@ public class OrderController extends BaseController{
      * @param ids
      * @return
      */
-    @RequiresRoles(value = {"admin"})
+    @RequiresRoles(value = {"user","admin"}, logical = Logical.OR)
     @DeleteMapping("/a/order")
     @Transactional
     public Msg deleteProduct(@RequestBody String ids){
@@ -104,47 +103,64 @@ public class OrderController extends BaseController{
      * @return
      */
     @RequiresRoles(value = {"user","admin"}, logical = Logical.OR)
-    @GetMapping("/order")
-    public Msg getOrder(){
+    @GetMapping("/user/getOrder")
+    public PageTable getOrderByUser(@RequestParam(value = "page", defaultValue = "1") Integer page,
+                        @RequestParam(value = "limit", defaultValue = "20") Integer pageSize){
         User user = getLoginUser();
         if (user != null){
             OrderKey key = new OrderKey();
             key.setMlUserId(user.getId());
+            PageHelper.startPage(page, pageSize);
             List<Order> orders = orderService.selectByIds(key);
-            return Msg.success().put(ORDER,orders);
+            PageInfo<Order> orderPageInfo = new PageInfo<>(orders);
+            return PageTable.success().count(orderPageInfo.getTotal()).put(orders);
         }
-        return Msg.fail();
+        return PageTable.fail();
     }
 
     /**
      * 用户生成订单
-     * @param uid
      * @param aid
      * @return
      */
     @RequiresRoles(value = {"user","admin"}, logical = Logical.OR)
-    @PostMapping(value = "/order")
-    public Msg order(@RequestParam("mlUserId") String uid, @RequestParam("mlAddressId") Integer aid){
+    @PostMapping(value = "/user/order")
+    public Msg order(@RequestParam("mlAddressId") Integer aid){
         Order order = new Order();
-        order.setMlUserId(uid);
+        order.setMlUserId(getLoginUser().getId());
         order.setMlAddressId(aid);
-        order.setNumber(5);
-        order.setMoney(245.5);
-        OrderItem o1 = new OrderItem();
-        o1.setMlProductId("pdqsa9s8ecusv0cift4xdbndjargtaqs");
-        o1.setMoney(56.2);
-        o1.setNumber(2);
-        OrderItem o2 = new OrderItem();
-        o2.setMlProductId("pd0v3ytxuvvnh91ejgwweqhqxxa0ts2z");
-        o2.setMoney(99.9);
-        o2.setNumber(3);
         List<OrderItem> list = new ArrayList<>();
-        list.add(o1);
-        list.add(o2);
+        Cart cart = (Cart)getSession().getAttribute("cart");
+        order.setNumber(cart.getTotalNumber());
+        order.setMoney(cart.getTotalMoney());
+        Map<String,CartItem> items = cart.getItems();
+        items.forEach((k,v)-> list.add(new OrderItem(v.getNumber(),v.getMoney(),k)));
         order.setOrderItem(list);
-        Order u = orderService.insert(order);
-        if (u != null){
-            return Msg.success().put("order",u);
+        Order o = orderService.insert(order);
+        if (o != null){
+            getSession().removeAttribute("cart");
+            return Msg.success().put("order",o);
+        }
+        return Msg.fail();
+    }
+
+    @RequiresRoles(value = {"user","admin","VIP1"}, logical = Logical.OR)
+    @RequestMapping("/user/sureOrder")
+    public Msg sureOrder(@RequestParam("id") String id){
+        if (!StringUtils.isEmpty(id)){
+            OrderKey key = new OrderKey();
+            key.setId(id);
+            key.setMlUserId(getLoginUser().getId());
+            List<Order> orders = orderService.selectByIds(key);
+            if (!CollectionUtils.isEmpty(orders)){
+                Order o = new Order();
+                o.setId(id);
+                o.setStatus(Byte.valueOf("4"));
+                o = orderService.updateByIdSelective(o);
+                if (o != null){
+                    return Msg.success().put(ORDER,o);
+                }
+            }
         }
         return Msg.fail();
     }

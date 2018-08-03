@@ -19,6 +19,15 @@ public class OrderItem extends OrderItemKey implements Serializable {
 
     private Product product;
 
+    public OrderItem() {
+    }
+
+    public OrderItem(Integer number, Double money, String mlProductId) {
+        this.number = number;
+        this.money = money;
+        this.mlProductId = mlProductId;
+    }
+
     public Integer getNumber() {
         return number;
     }
