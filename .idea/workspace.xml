@@ -6,10 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e143c60d-ff19-4106-97fe-304598bf5a77" name="Default" comment="8.1">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="e143c60d-ff19-4106-97fe-304598bf5a77" name="Default" comment="8.7" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/mall-pojo/target/" />
@@ -43,7 +40,7 @@
     <session id="1869579696">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="26" />
+          <entry key="project.closed" value="27" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.19" value="1" />
@@ -114,9 +111,9 @@
           <entry key="java" value="8515" />
           <entry key="js" value="6998" />
           <entry key="json" value="188" />
-          <entry key="md" value="61" />
+          <entry key="md" value="63" />
           <entry key="properties" value="22" />
-          <entry key="txt" value="66" />
+          <entry key="txt" value="67" />
           <entry key="xml" value="241" />
         </counts>
       </usages-collector>
@@ -127,8 +124,8 @@
           <entry key="JAVA" value="8515" />
           <entry key="JSON" value="188" />
           <entry key="JavaScript" value="6993" />
-          <entry key="Markdown" value="61" />
-          <entry key="PLAIN_TEXT" value="66" />
+          <entry key="Markdown" value="63" />
+          <entry key="PLAIN_TEXT" value="67" />
           <entry key="Properties" value="22" />
           <entry key="SQL" value="3" />
           <entry key="VTL" value="2" />
@@ -148,26 +145,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1523">
+            <state relative-caret-position="-860">
               <caret line="238" column="38" lean-forward="true" selection-start-line="238" selection-start-column="38" selection-end-line="238" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="34">
-                <caret line="2" column="55" lean-forward="true" selection-start-line="2" selection-start-column="55" selection-end-line="2" selection-end-column="55" />
-              </first_editor>
-              <second_editor />
             </state>
           </provider>
         </entry>
@@ -390,33 +375,6 @@
               <item name="mall-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mallmanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mallmanager" type="462c0819:PsiDirectoryNode" />
-              <item name="mall-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mallmanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mallmanager" type="462c0819:PsiDirectoryNode" />
-              <item name="mall-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mallmanager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mallmanager" type="462c0819:PsiDirectoryNode" />
-              <item name="mall-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -3318,8 +3276,16 @@
       <workItem from="1533269946886" duration="6910000" />
       <workItem from="1533277180485" duration="239000" />
       <workItem from="1533278659783" duration="8237000" />
-      <workItem from="1533613514925" duration="178000" />
+      <workItem from="1533613514925" duration="377000" />
     </task>
+    <task id="LOCAL-00001" summary="8.7">
+      <created>1533613730613</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1533613730613</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -3355,7 +3321,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="288049000" />
+    <option name="totallyTimeSpent" value="288248000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -3368,9 +3334,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="26" width="1863" height="1054" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49830508" visible="true" weight="0.27242708" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49830508" visible="true" weight="0.27242708" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -3389,8 +3354,8 @@
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.3296837" />
       <window_info anchor="bottom" id="Messages" order="9" sideWeight="0.49865952" weight="0.32543105" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" weight="0.32972974" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32846716" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49807376" visible="true" weight="0.30280173" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.3275862" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.49807376" visible="true" weight="0.30280173" />
       <window_info anchor="bottom" id="Application Servers" order="13" weight="0.32972974" />
       <window_info active="true" anchor="bottom" id="REST Client" order="14" weight="0.39150944" />
       <window_info anchor="bottom" id="Spring" order="15" weight="0.3286638" />
@@ -3416,7 +3381,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="8.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="8.1" />
+    <MESSAGE value="8.7" />
+    <option name="LAST_COMMIT_MESSAGE" value="8.7" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/mall-web/src/main/webapp/static/json/address.json">
@@ -3756,23 +3722,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1523">
-          <caret line="238" column="38" lean-forward="true" selection-start-line="238" selection-start-column="38" selection-end-line="238" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="34">
-            <caret line="2" column="55" lean-forward="true" selection-start-line="2" selection-start-column="55" selection-end-line="2" selection-end-column="55" />
+            <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall-web/src/main/java/org/jleopard/mall/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-860">
+          <caret line="238" column="38" lean-forward="true" selection-start-line="238" selection-start-column="38" selection-end-line="238" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
