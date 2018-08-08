@@ -27,13 +27,7 @@
 			<div class="layui-form-item">
 				<label class="layui-form-label">用户名</label>
 				<div class="layui-input-block">
-					<input type="text" value="驊驊龔頾" disabled class="layui-input layui-disabled">
-				</div>
-			</div>
-			<div class="layui-form-item">
-				<label class="layui-form-label">用户组</label>
-				<div class="layui-input-block">
-					<input type="text" value="超级管理员" disabled class="layui-input layui-disabled">
+					<input type="text" value="" disabled class="layui-input nickname">
 				</div>
 			</div>
 			<div class="layui-form-item">
@@ -85,22 +79,18 @@
 			<div class="layui-form-item">
 				<label class="layui-form-label">掌握技术</label>
 				<div class="layui-input-block userHobby">
+					<input type="checkbox" name="like[Java]" title="Java">
+					<input type="checkbox" name="like[Python]" title="Python">
 					<input type="checkbox" name="like[javascript]" title="Javascript">
 					<input type="checkbox" name="like[C#]" title="C#">
 					<input type="checkbox" name="like[php]" title="PHP">
+					<input type="checkbox" name="like[ASP]" title="ASP">
 					<input type="checkbox" name="like[html]" title="HTML(5)">
 					<input type="checkbox" name="like[css]" title="CSS(3)">
 					<input type="checkbox" name="like[.net]" title=".net">
-					<input type="checkbox" name="like[ASP]" title="ASP">
 					<input type="checkbox" name="like[Angular]" title="Angular">
 					<input type="checkbox" name="like[VUE]" title="VUE">
 					<input type="checkbox" name="like[XML]" title="XML">
-				</div>
-			</div>
-			<div class="layui-form-item">
-				<label class="layui-form-label">邮箱</label>
-				<div class="layui-input-block">
-					<input type="text" value="" placeholder="请输入邮箱" lay-verify="email" class="layui-input userEmail">
 				</div>
 			</div>
 			<div class="layui-form-item">
@@ -118,9 +108,8 @@
 		</div>
 	</form>
 <div th:replace="~{common/__footer :: #j_footer}"></div>
-<script type="text/javascript" src="/static/js/userInfo.js"></script>
 <script>
-    layui.cache.page = 'cacheUserInfo';
+    layui.cache.page = 'userInfo';
 </script>
 </body>
 </html>

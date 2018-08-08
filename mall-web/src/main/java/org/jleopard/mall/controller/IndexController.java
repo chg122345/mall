@@ -53,6 +53,11 @@ public class IndexController extends BaseController{
     }
 
 
+    /**
+     * 跳转商品详情页
+     * @param id
+     * @return
+     */
     @GetMapping("/product/{id}")
     public ModelAndView detail(@PathVariable("id") String id){
         ProductKey key = new ProductKey();
@@ -64,6 +69,12 @@ public class IndexController extends BaseController{
         return getModelAndView("/detail");
     }
 
+    /**
+     * 会员注册
+     * @param user
+     * @param vercode
+     * @return
+     */
     @PostMapping("/register")
     public Msg register(User user, @RequestParam("vercode") String vercode){
         if (!vercode.toLowerCase().equals(getSession().getAttribute("imageCode").toString().toLowerCase())) {

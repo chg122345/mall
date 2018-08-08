@@ -36,6 +36,14 @@ public class LoginController extends BaseController{
     @Autowired
     private UserService userService;
 
+    /**
+     * 用户登录处理
+     * @param session
+     * @param email
+     * @param password
+     * @param vercode
+     * @return
+     */
     @PostMapping("/login")
     public Msg login(HttpSession session, @RequestParam("email") String email
             , @RequestParam("password") String password, @RequestParam("vercode") String vercode){

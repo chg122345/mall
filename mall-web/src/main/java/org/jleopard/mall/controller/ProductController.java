@@ -3,6 +3,7 @@ package org.jleopard.mall.controller;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import lombok.extern.log4j.Log4j;
+import org.apache.shiro.authz.annotation.RequiresAuthentication;
 import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.jleopard.Msg;
 import org.jleopard.PageTable;
@@ -54,6 +55,7 @@ public class ProductController extends BaseController {
      * @param page
      * @return
      */
+    @RequiresAuthentication
     @RequiresRoles(value = {"admin"})
     @GetMapping("/{page}")
     public ModelAndView load(@PathVariable("page") String page){
@@ -65,6 +67,7 @@ public class ProductController extends BaseController {
      * 管理员添加商品页面
      * @return
      */
+    @RequiresAuthentication
     @RequiresRoles(value = {"admin"})
     @GetMapping("/productAdd")
     public ModelAndView addProductPage(){
@@ -87,6 +90,12 @@ public class ProductController extends BaseController {
         return PageTable.success().count(productPageInfo.getTotal()).put(products);
     }
 
+    /**
+     * 获取详情信息
+     * @param id
+     * @return
+     */
+    @Deprecated
     @GetMapping("/product/{id}")
     public Msg getProductById(@PathVariable("id") String id){
         ProductKey key = new ProductKey();
@@ -103,6 +112,7 @@ public class ProductController extends BaseController {
      * @param product
      * @return
      */
+    @RequiresAuthentication
     @RequiresRoles(value = {"admin"})
     @PostMapping("/product")
     public Msg addProduct(Product product){
@@ -127,6 +137,7 @@ public class ProductController extends BaseController {
      * @param ids
      * @return
      */
+    @RequiresAuthentication
     @RequiresRoles(value = {"admin"})
     @DeleteMapping("/product")
     @Transactional
@@ -151,6 +162,7 @@ public class ProductController extends BaseController {
      * @param file
      * @return
      */
+    @RequiresAuthentication
     @RequiresRoles(value = {"admin"})
     @PostMapping("/upload")
     private Msg upload(MultipartFile file) {

@@ -76,7 +76,7 @@ layui.use(['form','element','layer','jquery'],function(){
     //最新文章列表
     $.get("/static/json/newsList.json",function(data){
         var hotNewsHtml = '';
-        for(var i=0;i<5;i++){
+        for(var i=0;i<4;i++){
             hotNewsHtml += '<tr>'
                 +'<td align="left"><a href="javascript:;"> '+data.data[i].newsName+'</a></td>'
                 +'<td>'+data.data[i].newsTime.substring(0,10)+'</td>'

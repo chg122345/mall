@@ -47,7 +47,14 @@ layui.use(['form','layer','table','laytpl'],function(){
               return res;
             }},
             {field: 'created', title: '下单时间', align:'center',minWidth:150,sort:true},
-            {title: '操作', minWidth:175, templet:'#userListBar',fixed:"right",align:"center"}
+            {field: 'status', title: '操作', minWidth:175,fixed:"right",align:"center", templet:function (d) {
+                    var s = d.status;
+                   if (s == 2){
+                        return "<a class='layui-btn layui-btn-xs layui-btn-warm' lay-event='send'>发货</a>";
+                    } else {
+                        return "<a class='layui-btn layui-btn-xs' lay-event='edit'>更新</a><a class='layui-btn layui-btn-xs layui-btn-danger' lay-event='del'>删除</a>";
+                    }
+                }}
         ]]
     });
 
@@ -132,27 +139,14 @@ layui.use(['form','layer','table','laytpl'],function(){
 
         if(layEvent === 'edit'){ //更新
             updateOrder(data);
-        }/*else if(layEvent === 'usable'){ //启用禁用
-            var _this = $(this),
-                usableText = "是否确定禁用此用户？",
-                btnText = "已禁用";
-            if(_this.text()=="已禁用"){
-                usableText = "是否确定启用此用户？",
-                btnText = "已启用";
-            }
-            layer.confirm(usableText,{
-                icon: 3,
-                title:'系统提示',
-                cancel : function(index){
-                    layer.close(index);
+        }else if(layEvent === 'send'){ //发货
+            $.post('/a/sendOrder',{id:data.id},function (res) {
+                layer.msg(res.msg);
+                if (res.code === 200){
+                    window.location.reload();
                 }
-            },function(index){
-                _this.text(btnText);
-                layer.close(index);
-            },function(index){
-                layer.close(index);
-            });
-        }*/else if(layEvent === 'del'){ //删除
+            })
+        }else if(layEvent === 'del'){ //删除
             layer.confirm('确定删除'+ data.id +'用户？',{icon:3, title:'提示信息'},function(index){
                 $.ajax({
                     url : "/a/order",

@@ -8,6 +8,7 @@ import com.alipay.api.request.AlipayTradePagePayRequest;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import lombok.extern.log4j.Log4j;
+import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authz.annotation.Logical;
 import org.apache.shiro.authz.annotation.RequiresAuthentication;
 import org.apache.shiro.authz.annotation.RequiresRoles;
@@ -76,6 +77,19 @@ public class UserController extends BaseController {
         return PageTable.success().put(users).count(userPageInfo.getTotal());
     }
 
+    /**
+     * 获取登录的用户信息
+     * @return
+     */
+    @RequiresRoles(value = {"admin","user"},logical=Logical.OR)
+    @GetMapping("/getUserInfo")
+    public Msg userInfo(){
+        User user = userService.selectById(getLoginUser().getId());
+        if (user != null){
+            return Msg.success().put(USER_INFO,user);
+        }
+        return Msg.fail();
+    }
     /**
      * 新增 id为空则表示新增
      * 更新 --> 判断传过来的id是否非空
@@ -189,6 +203,11 @@ public class UserController extends BaseController {
         return Msg.fail();
     }
 
+    /**
+     * 新增收货地址
+     * @param address
+     * @return
+     */
     @RequiresRoles(value = {"user","admin","VIP1"}, logical = Logical.OR)
     @PostMapping("/address")
     public Msg address(Address address){
@@ -203,6 +222,10 @@ public class UserController extends BaseController {
         return Msg.fail();
     }
 
+    /**
+     * 获取收货地址
+     * @return
+     */
     @RequiresRoles(value = {"user","admin","VIP1"}, logical = Logical.OR)
     @GetMapping("/getAddress")
     public Msg address(){
@@ -216,6 +239,38 @@ public class UserController extends BaseController {
         return Msg.fail();
     }
 
+    /**
+     * 修改密码
+     * @param nickname
+     * @param oldPass
+     * @param newPass
+     * @return
+     */
+    @RequiresRoles(value = {"user","admin","VIP1"}, logical = Logical.OR)
+    @PostMapping("/change")
+    public Msg changeUserInfo(@RequestParam("nickname") String nickname,
+                              @RequestParam("oldPassword") String oldPass, @RequestParam("newPassword") String newPass){
+        User user = getLoginUser();
+        if (!user.getPassword().equals(MD5Helper.md5(oldPass, user.getEmail()))){
+            return Msg.msg("旧密码不正确..");
+        }
+        User u = new User();
+        u.setId(user.getId());
+        u.setNickname(nickname);
+        u.setPassword(MD5Helper.md5(newPass, user.getEmail()));
+        if (userService.updateById(u) != null){
+            SecurityUtils.getSubject().logout();
+            return Msg.success();
+        }
+        return Msg.fail();
+    }
+
+    /**
+     * 支付
+     * @param id
+     * @return
+     * @throws AlipayApiException
+     */
     @RequiresRoles(value = {"user","admin","VIP1"}, logical = Logical.OR)
     @GetMapping(value = "/pay/{id}",produces = "text/html; charset=UTF-8")
     public String pay(@PathVariable("id") String id) throws AlipayApiException {
@@ -323,7 +378,7 @@ public class UserController extends BaseController {
                         : valueStr + values[i] + ",";
             }
             //乱码解决，这段代码在出现乱码时使用
-//			valueStr = new String(valueStr.getBytes("ISO-8859-1"), "utf-8");
+			valueStr = new String(valueStr.getBytes("ISO-8859-1"), "utf-8");
             params.put(name, valueStr);
         }
 

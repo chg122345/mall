@@ -1,17 +1,32 @@
-layui.define(['form','layer','laydate',"address","jl"],function(exports){
+layui.define(['form','layer','laydate',"jl"],function(exports){
     var  form = layui.form,
         $ = layui.jquery,
         layer = parent.layer === undefined ? layui.layer : top.layer,
         laydate = layui.laydate,
-        address = layui.address,
         jl = layui.jl;
 
     jl.jlupload('/api/upload','.userFaceBtn',"",function (res) {
         layer.msg(res.msg);
         console.log(res);
     });
+
     //添加验证规则
     form.verify({
+        oldPwd : function(value, item){
+            if(value.length < 5){
+                return "密码长度不能小于5位";
+            }
+        },
+        newPwd : function(value, item){
+            if(value.length < 5){
+                return "密码长度不能小于5位";
+            }
+        },
+        confirmPwd : function(value, item){
+            if($("#oldPwd").val()!= value){
+                return "两次输入密码不一致，请重新输入！";
+            }
+        },
         tel : function(value){
             var myreg=/^[1][3,4,5,7,8][0-9]{9}$/;
             if (!myreg.test(value)){
@@ -38,9 +53,6 @@ layui.define(['form','layer','laydate',"address","jl"],function(exports){
             }
         }
     });
-
-    //获取省信息
-    address.provinces();
 
     //提交个人资料
     form.on("submit(changeUser)",function(data){
@@ -75,11 +87,28 @@ layui.define(['form','layer','laydate',"address","jl"],function(exports){
     form.on("submit(changePwd)",function(data){
         var index = layer.msg('提交中，请稍候',{icon: 16,time:false,shade:0.8});
         setTimeout(function(){
+            jl.req('/user/change',{nickname:data.field.nickname,oldPassword:data.field.old,newPassword:data.field.new},function (res) {
+                layer.msg(res.msg);
+                if (res.code === 200){
+                    window.location.href= '/login';
+                }
+            });
             layer.close(index);
-            layer.msg("密码修改成功！");
             $(".pwd").val('');
         },2000);
         return false; //阻止表单跳转。如果需要表单跳转，去掉这段即可。
     });
+
+    getUserInfo();
+
+    function getUserInfo(){
+        $("#userFace").attr("src","/static/images/userface3.jpg");
+        jl.req('/user/getUserInfo','',function (res) {
+            if (res.code === 200){
+                var user =res.data.user;
+                $(".nickname").val(user.nickname); //用户名
+            }
+        },{type : 'GET'})
+    }
     exports('userInfo',null);
 });

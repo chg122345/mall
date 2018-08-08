@@ -82,15 +82,15 @@
 			<div class="user-photo">
 				<a class="img" title="我的头像" ><img src="/static/images/face.jpg" class="userAvatar"></a>
 				<span shiro:authenticated="true" >
-				<p>你好！<span class="userName" th:text="${session.user.nickname}">驊驊龔頾</span>, 欢迎登录</p>
+				<p>你好！<span class="userName" th:text="${session.user.nickname}"></span>, 欢迎登录</p>
 				</span>
 			</div>
 			<!-- 搜索 -->
 			<div class="layui-form component">
 				<select name="search" id="search" lay-search lay-filter="searchPage">
 					<option value="">搜索页面或功能</option>
-					<option value="1">layer</option>
-					<option value="2">form</option>
+					<option value="1">JL社区</option>
+					<option value="2">Jleopard</option>
 				</select>
 				<i class="layui-icon">&#xe615;</i>
 			</div>

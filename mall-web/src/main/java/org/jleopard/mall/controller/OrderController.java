@@ -144,6 +144,36 @@ public class OrderController extends BaseController{
         return Msg.fail();
     }
 
+    /**
+     * 发货
+     * @param id
+     * @return
+     */
+    @RequiresRoles(value = {"admin"})
+    @RequestMapping("/a/sendOrder")
+    public Msg send(@RequestParam("id") String id){
+        if (!StringUtils.isEmpty(id)){
+            OrderKey key = new OrderKey();
+            key.setId(id);
+            List<Order> orders = orderService.selectByIds(key);
+            if (!CollectionUtils.isEmpty(orders)){
+                Order o = new Order();
+                o.setId(id);
+                o.setStatus(Byte.valueOf("3"));
+                o = orderService.updateByIdSelective(o);
+                if (o != null){
+                    return Msg.success().put(ORDER,o);
+                }
+            }
+        }
+        return Msg.fail();
+    }
+
+    /**
+     * 收货
+     * @param id
+     * @return
+     */
     @RequiresRoles(value = {"user","admin","VIP1"}, logical = Logical.OR)
     @RequestMapping("/user/sureOrder")
     public Msg sureOrder(@RequestParam("id") String id){
@@ -164,4 +194,6 @@ public class OrderController extends BaseController{
         }
         return Msg.fail();
     }
+
+
 }

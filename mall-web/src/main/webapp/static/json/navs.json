@@ -15,7 +15,7 @@
 		{
 			"title": "图片管理",
 			"icon": "&#xe634;",
-			"href": "/img/images",
+			"href": "javascript:;",
 			"spread": false
 		},
 		{
@@ -50,7 +50,7 @@
 		{
 			"title": "会员等级",
 			"icon": "icon-vip",
-			"href": "/a/userGrade",
+			"href": "javascript:;",
 			"spread": false
 		}
 	],
@@ -58,22 +58,22 @@
 		{
 			"title": "系统基本参数",
 			"icon": "&#xe631;",
-			"href": "/systemSetting/basicParameter",
+			"href": "javascript:;",
 			"spread": false
 		},{
 			"title": "系统日志",
 			"icon": "icon-log",
-			"href": "/systemSetting/logs",
+			"href": "javascript:;",
 			"spread": false
 		},{
 			"title": "友情链接",
 			"icon": "&#xe64c;",
-			"href": "/systemSetting/linkList",
+			"href": "javascript:;",
 			"spread": false
 		},{
 			"title": "图标管理",
 			"icon": "&#xe857;",
-			"href": "/systemSetting/icons",
+			"href": "javascript:;",
 			"spread": false
 		}
 	],
@@ -81,17 +81,17 @@
 		{
 			"title": "三级联动模块",
 			"icon": "icon-mokuai",
-			"href": "/doc/addressDoc",
+			"href": "javascript:;",
 			"spread": false
 		},{
 			"title": "bodyTab模块",
 			"icon": "icon-mokuai",
-			"href": "/doc/bodyTabDoc",
+			"href": "javascript:;",
 			"spread": false
 		},{
 			"title": "三级菜单",
 			"icon": "icon-mokuai",
-			"href": "/doc/navDoc",
+			"href": "javascript:;",
 			"spread": false
 		}
 	]
